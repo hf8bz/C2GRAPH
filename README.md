@@ -7,8 +7,6 @@ This README is the release landing page for the C2GRAPH documentation bundle. It
 surface only. Operational authority remains in the executable prompts, repository rules, configuration, and
 verification scripts shipped with the matching language edition.
 
-# C2GRAPH v1.0.0 Documentation
-
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21905651.svg)](https://doi.org/10.5281/zenodo.21905651)
 
 **Research Paper:**  
