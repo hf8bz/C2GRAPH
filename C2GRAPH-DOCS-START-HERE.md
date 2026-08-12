@@ -1,6 +1,6 @@
 # C2GRAPH Documentation — Start Here
 
-> **Release identity:** C2GRAPH `v1.0.0`, Version 1 / first public release. The model-adapter integration is an internal revision of the same product release, not C2GRAPH v2.
+> **Release identity:** C2GRAPH `v1.0.0`, Version 1. The runtime-scoped/cache-aware model adapter is included in this release.
 
 > **CLI notation:** `<C2PY>` is documentation notation. Resolve it for the current host/session with `C2GRAPH-CLI-LAUNCHER-GUIDE.md`; do not type `<C2PY>` literally.
 
@@ -21,7 +21,7 @@
 | Understand architecture and design rationale | `C2GRAPH-DEEP-DIVE.md` |
 | Find a shipped file | `C2GRAPH-FILE-MAP.md` |
 | Diagnose a stopped run | `C2GRAPH-TROUBLESHOOTING.md` |
-| Read release evidence and limitations | `README.md` |
+| Read release overview and limitations | `README.md` |
 
 ## Model adapter boundary
 

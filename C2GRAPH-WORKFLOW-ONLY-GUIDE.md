@@ -6,11 +6,11 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> First-public-release status: `WORKFLOW_ONLY` is included in C2GRAPH `v1.0.0`, released **12 August 2026**. It does not depend on any earlier public C2GRAPH version.
+> Version 1 release status: `WORKFLOW_ONLY` is included in C2GRAPH `v1.0.0`, released **12 August 2026**. 
 
 > Canonical operator guide for installing, repairing, upgrading, or verifying the C2GRAPH control plane in an existing non-empty repository without creating or requiring a new goal.
 
-[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release post](GITHUB-RELEASE.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md) - [Safe GATE 0](C2GRAPH-SAFE-GATE0-ROLLBACK-GUIDE.md) - [Actual write plan](C2GRAPH-ACTUAL-WRITE-PLAN-ROLLBACK-GUIDE.md)
+[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release README](README.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md) - [Safe GATE 0](C2GRAPH-SAFE-GATE0-ROLLBACK-GUIDE.md) - [Actual write plan](C2GRAPH-ACTUAL-WRITE-PLAN-ROLLBACK-GUIDE.md)
 
 Blocker routing: [C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md](C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md).
 
@@ -22,7 +22,7 @@ Use it when the requested work is only one or more of the following:
 
 - install C2GRAPH into an existing repository;
 - repair a damaged or incomplete C2GRAPH installation;
-- upgrade an older C2GRAPH installation;
+- align an existing C2GRAPH installation;
 - verify that an existing C2GRAPH installation is internally consistent.
 
 The repository does **not** need an active goal for those control-plane operations. A missing goal, an empty goal ledger, only terminal goals, or an inactive goal state does not by itself block workflow installation.

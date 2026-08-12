@@ -39,11 +39,11 @@ exposure. See [C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md](C2GRAPH-SECRET-SAFETY-PHAS
 
 # C2GRAPH - troubleshooting and FAQ
 
-> Version scope: troubleshooting on this page targets the C2GRAPH `v1.0.0` first public release dated **12 August 2026**.
+> Version scope: troubleshooting on this page targets the C2GRAPH `v1.0.0` Version 1 release dated **12 August 2026**.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
-[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release post](GITHUB-RELEASE.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md)
+[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release README](README.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md)
 
 Blocker routing: [C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md](C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md).
 
@@ -77,15 +77,14 @@ ignoring a written rule rather than the rule being absent.
 
 ## The run asked me a pile of questions at once
 
-That behaviour existed in pre-release development snapshots, not in the `v1.0.0` public baseline.
-Check which archive you are running first. Open `AGENTS.md` and look at line five: the v1.0.0 first public release
-release identifies the C2GRAPH template as `v1.0.0`. A development snapshot that lacks this
-first-release baseline may carry older prompt behaviour, including instructions that send every
-question in one message.
+Verify the archive and source tree against the v1.0.0 checksums, then run aggregate verification before changing
+workflow semantics. Open `AGENTS.md` and confirm that the source identifies C2GRAPH `v1.0.0`. A mismatched or
+locally modified tree can carry different prompt behavior, including instructions that send every question in one
+message.
 
-If you are on the current archive and it still happens, the agent is disobeying a written rule rather
-than following one. Point it at the PHASE 3 rules and the gate that checks them. The rule is stated in
-the prompt, in the prohibitions list, and in a gate, so all three can be quoted back.
+If the verified release tree still behaves this way, the agent is disobeying a written rule rather than following
+one. Point it at the PHASE 3 rules and the gate that checks them. The rule is stated in the prompt, in the
+prohibitions list, and in a gate, so all three can be quoted back.
 
 ---
 
@@ -187,7 +186,7 @@ cites an artifact. A claim without an artifact violates the fifth invariant.
 
 ## The router keeps getting longer
 
-There is a hard limit, `router_max_lines`, defaulting to 195. The v1.0.0 first public release carries `AGENTS.md` at 195 lines in English and 194 lines in Indonesian. When
+There is a hard limit, `router_max_lines`, defaulting to 195. The v1.0.0 Version 1 release carries `AGENTS.md` at 195 lines in English and 194 lines in Indonesian. When
 the router grows, something that belongs in a scope or a runbook was written into it. That cost is paid
 on every single request, so the limit is a budget rather than a style preference. Move the new rule down
 a layer and leave a routing row behind.

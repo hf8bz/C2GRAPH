@@ -1,6 +1,6 @@
 # C2GRAPH v1.0.0 — bounded evidence read guide
 
-`v1.0.0` is the **first public C2GRAPH release**, dated **12 August 2026**. Bounded evidence read is part of that release baseline; it is
+`v1.0.0` is the **C2GRAPH Version 1 release**, dated **12 August 2026**. Bounded evidence read is part of that release baseline; it is
 not a maintenance add-on. The layer controls how repository bytes become agent evidence without replacing goal,
 backup, rollback, secret, pre-write, or effect-time authority.
 
@@ -105,7 +105,7 @@ three rounds.
   speed optimization.
 - The optimized implementation removes the earlier overlapping-read regression: on `ordinary_3000.txt`, the same
   harness fell from about 53.8 ms before the read-ahead/O(1)-counter correction to about 6.08 ms after it.
-  The pre-fix number is engineering provenance, not a first-public-release performance claim.
+  The comparison baseline is supplemental engineering evidence, not a release performance claim.
 - The 7.76 MB ordinary fixture admits 131,072 bytes on the first view (98.31% less than whole-file returned bytes)
   while keeping local `tracemalloc` peak below the whole-file baseline in this harness.
 - The 512 KiB minified and 2.00 MB wide-line fixtures admit only 2,000 bytes because the per-line ceiling fires.
@@ -150,7 +150,7 @@ The FIFO baseline was executed in a child process with a 200 ms timeout rather t
 classified it as non-regular without content blocking. The raw plain secret fixture returns content; the C2Graph CLI
 refuses it before returning the secret value.
 
-## Bounded Read v2 pre-public hardening
+## Bounded Read v2 hardening
 
 The released v1.0.0 baseline keeps the three original per-view ceilings and adds a second bound at read-intent level.
 Three sequential windows are permitted by default; a fourth blind page returns `STRATEGY_REVIEW_REQUIRED`. The
@@ -182,4 +182,3 @@ strategy review before a fourth blind page. Legacy `(line,char)` starts remain c
 the first exact source byte. Hard ceilings may be narrowed by ordinary callers but not widened. The separate
 cross-window mutation suite and repeated process-reviewer rounds verify these contracts on the tested tree; the
 fingerprint is still an integrity/freshness mechanism, not a digital signature or immutable filesystem snapshot.
-

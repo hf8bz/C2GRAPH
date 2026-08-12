@@ -1,6 +1,6 @@
 # C2GRAPH — Current File Map
 
-> Version scope: C2GRAPH `v1.0.0`, Version 1 / first public release, adapter-integrated source: **199 files per EN/ID edition** plus the separate **17-file documentation bundle**.
+> Version scope: C2GRAPH `v1.0.0`, Version 1 release, adapter-integrated source: **198 files per EN/ID edition** plus the separate **17-file documentation bundle**.
 
 The EN and ID editions have the same relative-path set. Localized prose differs; executable adapter and verification code is checked for parity.
 

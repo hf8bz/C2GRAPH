@@ -6,11 +6,11 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version scope: this deep dive describes mechanisms shipped together in the first public C2GRAPH `v1.0.0` release, dated **12 August 2026**. Earlier design references are pre-release engineering history, not prior public releases.
+> Version scope: this deep dive describes mechanisms shipped together in the C2GRAPH `v1.0.0` Version 1 release, dated **12 August 2026**. 
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
-[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release post](GITHUB-RELEASE.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md)
+[Docs start](C2GRAPH-DOCS-START-HERE.md) - [Release README](README.md) - [Deep dive](C2GRAPH-DEEP-DIVE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) - [File map](C2GRAPH-FILE-MAP.md) - [Bounded read](C2GRAPH-BOUNDED-READ-GUIDE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Agent instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md) - [Entry-mode matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md)
 
 Blocker routing: [C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md](C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md).
 
@@ -152,7 +152,7 @@ snapshots the existing goal plane, then runs the same SCAN gates under `ENTRY_MO
 PHASE 8 is the only branch that changes: no goal is created, inherited, reactivated, superseded,
 abandoned, or completed. The final report must prove `GOAL_MUTATIONS: 0` and `PRODUCT_CHANGES: 0`.
 
-This closes a lifecycle gap found in the pre-release design: an already-completed repository could not receive workflow maintenance without inventing goal activity:
+This closes a lifecycle gap: a repository with no active implementation goal can receive workflow maintenance without inventing goal activity:
 forcing a fake or reactivated goal just to install workflow machinery would make the goal ledger lie.
 The integrity gate therefore has two explicit meanings. `<C2PY> scripts/goal/gate.py` validates the
 ledger and permits a zero-active-goal state. `<C2PY> scripts/goal/gate.py --require-active` is the
@@ -371,7 +371,7 @@ you. A single-application repository keeps a single index, but it has to say so.
 
 ## Mobile work is treated as irreversible
 
-A published build cannot be unpublished. Mobile scopes and their configuration block are therefore
+Release metadata and artifact status must remain internally consistent. Mobile scopes and their configuration block are therefore
 all-or-nothing: either the whole set is present and complete, or it is deleted as a set. A half
 configured release path is worse than none, because it looks ready.
 
@@ -436,7 +436,7 @@ Resume through Prompt 97 re-resolves `C2PY`, validates/echoes the newest capsule
 
 ## The read boundary is now engineered
 
-The first-public C2GRAPH v1.0.0 baseline constrains discovery semantically and also applies a physical ingestion boundary. Unknown/large text
+C2GRAPH v1.0.0 constrains discovery semantically and also applies a physical ingestion boundary. Unknown/large text
 is converted into bounded evidence under independent line, UTF-8 byte, and per-physical-line ceilings. Human coordinates remain `(line, char)`, but emitted Bounded Read v2 continuations bind exact source-byte offset,
 source generation, ceiling profile, sequence, and previous-view digest. Generated continuations seek directly from
 the recorded offset, and the default fourth blind sequential window requires strategy review. Typed outcomes

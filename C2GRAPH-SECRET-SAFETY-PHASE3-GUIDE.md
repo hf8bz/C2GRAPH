@@ -7,7 +7,7 @@
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
 > Canonical operator guide for secret-safe discovery and the single human stop boundary used by
-> CORE-33. This guide describes the contract shipped in the first public `v1.0.0` release, dated **12 August 2026**; it is not a later-version change.
+> CORE-33. This guide describes the contract shipped in the `v1.0.0` Version 1 release, dated **12 August 2026**; it is not a later-version change.
 
 [Docs start](C2GRAPH-DOCS-START-HERE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Safe GATE 0](C2GRAPH-SAFE-GATE0-ROLLBACK-GUIDE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md)
 

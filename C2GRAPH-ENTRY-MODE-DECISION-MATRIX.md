@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Release baseline: all entry modes in this matrix ship together in the first public release, `v1.0.0`, dated **12 August 2026**; `WORKFLOW_ONLY` is not an upgrade-only feature added after an earlier public version.
+> Release scope: all entry modes in this matrix ship together in the Version 1 release, `v1.0.0`, dated **12 August 2026**.
 
 > Deterministic routing guide for choosing `ADOPT_WITH_GOAL`, `WORKFLOW_ONLY`, or `BOOTSTRAP` before an agent changes a repository.
 
@@ -95,7 +95,7 @@ A workflow-only request becomes invalid when it is mixed with product implementa
 | --- | --- |
 | "Install C2GRAPH." | proceed if repo is existing/non-empty |
 | "Upgrade C2GRAPH to the new workflow version." | proceed if only control-plane files are needed |
-| "Verify C2GRAPH after a previous install." | proceed |
+| "Verify an existing C2GRAPH installation." | proceed |
 | "Repair the workflow scripts but leave the app alone." | proceed if repair truly stays inside authorized control-plane scope |
 | "Install C2GRAPH and fix checkout." | STOP/split; checkout is product work |
 | "Install C2GRAPH and update the DB schema." | STOP/split; migration is product work |

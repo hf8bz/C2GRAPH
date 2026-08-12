@@ -1,6 +1,6 @@
 # C2GRAPH Model Adapter and Cache-Aware Boundary Guide
 
-**Product release:** C2GRAPH v1.0.0 — Version 1 / first public release.  
+**Product release:** C2GRAPH v1.0.0 — Version 1 release.  
 **Engineering adapter revision:** C2ModelAdapter v0.4.1.  
 **Scope:** host-side protocol/runtime/cache compatibility. The adapter does not become C2GRAPH write authority.
 
