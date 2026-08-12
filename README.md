@@ -1,18 +1,22 @@
 # C2GRAPH v1.0.0 Documentation
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21905651.svg)](https://doi.org/10.5281/zenodo.21905651)
-
-**Research Paper:**  
-[C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents](https://doi.org/10.5281/zenodo.21905651)
-
-Release: `v1.0.0` - Version 1, released 12 August 2026.
-
 **Release:** `v1.0.0` - Version 1, released **12 August 2026**.
 **Author:** Hafizh Al-Banna - [LinkedIn](http://www.linkedin.com/in/hafizh-al-banna-63275410)
 
 This README is the release landing page for the C2GRAPH documentation bundle. It describes the current Version 1
 surface only. Operational authority remains in the executable prompts, repository rules, configuration, and
 verification scripts shipped with the matching language edition.
+
+# C2GRAPH v1.0.0 Documentation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21905651.svg)](https://doi.org/10.5281/zenodo.21905651)
+
+**Research Paper:**  
+*C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents*  
+DOI: [10.5281/zenodo.21905651](https://doi.org/10.5281/zenodo.21905651)
+
+Release: `v1.0.0` - Version 1, released 12 August 2026.  
+Author: Hafizh Al-Banna
 
 ## What C2GRAPH provides
 
