@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+
+message: >-
+  If you use C2GRAPH in research, please cite the academic paper
+  listed in preferred-citation and cite the software repository
+  when appropriate.
+
+type: software
+
+title: "C2GRAPH"
+
+version: "1.0.0"
+
+date-released: "2026-08-12"
+
+authors:
+  - family-names: "Al-Banna"
+    given-names: "Hafizh"
+
+repository-code: "https://github.com/hf8bz/C2GRAPH"
+
+url: "https://github.com/hf8bz/C2GRAPH"
+
+license: MIT
+
+abstract: >-
+  C2GRAPH is a repository-level governance framework for AI coding agents.
+  It externalizes operational constraints such as goal state, evidence,
+  write authority, rollback scope, context budget, handoff, provenance,
+  tool discipline, failure memory, and verification into persistent
+  repository-level control structures.
+
+keywords:
+  - "C2GRAPH"
+  - "Graph Engineering"
+  - "AI Coding Agents"
+  - "Agentic Software Engineering"
+  - "Software Engineering"
+  - "Repository Governance"
+  - "AI Agent Governance"
+  - "Provenance"
+  - "Reproducibility"
+  - "Verification"
+  - "Bounded Read"
+  - "Context Management"
+
+preferred-citation:
+  type: article
+  title: "C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents"
+
+  authors:
+    - family-names: "Al-Banna"
+      given-names: "Hafizh"
+
+  doi: "10.5281/zenodo.21905651"
+
+  url: "https://doi.org/10.5281/zenodo.21905651"
+
+  year: 2026
+
+  date-published: "2026-08-12"
+
+  status: preprint
+
+  publisher:
+    name: "Zenodo"
