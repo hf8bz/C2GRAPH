@@ -2,7 +2,7 @@ cff-version: 1.2.0
 
 message: >-
   If you use C2GRAPH in research, please cite the academic paper
-  listed in preferred-citation and cite the software repository
+  listed in preferred-citation and cite the software release
   when appropriate.
 
 type: software
@@ -13,11 +13,15 @@ version: "1.0.0"
 
 date-released: "2026-08-12"
 
+doi: "10.5281/zenodo.21906534"
+
 authors:
   - family-names: "Al-Banna"
     given-names: "Hafizh"
 
 repository-code: "https://github.com/hf8bz/C2GRAPH"
+
+repository: "https://doi.org/10.5281/zenodo.21906534"
 
 url: "https://github.com/hf8bz/C2GRAPH"
 
@@ -46,6 +50,7 @@ keywords:
 
 preferred-citation:
   type: article
+
   title: "C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents"
 
   authors:
