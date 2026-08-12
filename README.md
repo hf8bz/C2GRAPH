@@ -4,10 +4,6 @@ This is still **C2GRAPH v1.0.0 / Version 1**. The host model-adapter integration
 
 The new host boundary uses C2ModelAdapter **v0.4.1** internally. Cache reuse is an optimization, never goal/evidence/write/completion authority. See `C2GRAPH-MODEL-ADAPTER-GUIDE.md`. The final bounded audit reports zero known unresolved defect/ambiguity inside the explicitly executed deterministic/process-level scope; it does not claim universal bug absence or live-provider semantic correctness.
 
-## Historical pre-adapter v1.0.0 narrative
-
-The material below is retained as **historical pre-adapter release evidence**. Numeric snapshots such as 174 files, 43 scripts and 28 registered checks describe that earlier v1.0.0 freeze and are not the current adapter-integrated counts.
-
 # C2GRAPH v1.0.0 - First Public Release
 
 > The initial public baseline is v1.0.0. This document preserves its historical audit sections while
