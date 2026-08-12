@@ -21,7 +21,7 @@
 | Understand architecture and design rationale | `C2GRAPH-DEEP-DIVE.md` |
 | Find a shipped file | `C2GRAPH-FILE-MAP.md` |
 | Diagnose a stopped run | `C2GRAPH-TROUBLESHOOTING.md` |
-| Read release evidence and limitations | `GITHUB-RELEASE.md` |
+| Read release evidence and limitations | `README.md` |
 
 ## Model adapter boundary
 
