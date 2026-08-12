@@ -7,6 +7,22 @@ This README is the release landing page for the C2GRAPH documentation bundle. It
 surface only. Operational authority remains in the executable prompts, repository rules, configuration, and
 verification scripts shipped with the matching language edition.
 
+## Research Paper
+
+C2GRAPH is accompanied by a bilingual academic preprint describing its
+motivation, architecture, governance model, execution mechanisms,
+experimental methodology, validation results, and limitations.
+
+**Paper:** *C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents*
+
+**DOI:** [10.5281/zenodo.21905651](https://doi.org/10.5281/zenodo.21905651)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21905651.svg)](https://doi.org/10.5281/zenodo.21905651)
+
+Available in:
+- English
+- Bahasa Indonesia
+
 ## What C2GRAPH provides
 
 C2GRAPH is a repository-level governance framework for AI coding agents. It externalizes operating constraints that
