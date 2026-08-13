@@ -1,4 +1,4 @@
-# C2GRAPH Blocker Convergence Guide -- v1.0.0
+# C2GRAPH Blocker Convergence Guide -- v1.1.0
 > **CLI notation:** `<C2PY>` is documentation notation, not a literal command or shell assignment.
 > Resolve it for the current host/session using [C2GRAPH-CLI-LAUNCHER-GUIDE.md](C2GRAPH-CLI-LAUNCHER-GUIDE.md):
 > - POSIX: `/bin/sh "<C2GRAPH_SOURCE_ROOT>/scripts/c2python.sh"`

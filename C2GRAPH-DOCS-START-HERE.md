@@ -1,6 +1,6 @@
 # C2GRAPH Documentation — Start Here
 
-> **Release identity:** C2GRAPH `v1.0.0`, Version 1. The runtime-scoped/cache-aware model adapter is included in this release.
+> **Release identity:** C2GRAPH `v1.1.0`, Version 1. The runtime-scoped/cache-aware model adapter is included in this release.
 
 > **CLI notation:** `<C2PY>` is documentation notation. Resolve it for the current host/session with `C2GRAPH-CLI-LAUNCHER-GUIDE.md`; do not type `<C2PY>` literally.
 
@@ -25,11 +25,11 @@
 
 ## Model adapter boundary
 
-The v1.0.0 adapter-integrated tree adds a host-side runtime-scoped/cache-aware adapter without promoting provider state into C2GRAPH authority. Cache hits and cached-token telemetry are performance evidence only. Raw provider cache keys, prompt prefixes and private reasoning are not durable C2GRAPH authority. See `C2GRAPH-MODEL-ADAPTER-GUIDE.md`.
+The v1.1.0 adapter-integrated tree adds a host-side runtime-scoped/cache-aware adapter without promoting provider state into C2GRAPH authority. Cache hits and cached-token telemetry are performance evidence only. Raw provider cache keys, prompt prefixes and private reasoning are not durable C2GRAPH authority. See `C2GRAPH-MODEL-ADAPTER-GUIDE.md`.
 
 ## Current measured source shape
 
-Per language edition: **198 files**, **46 Python scripts**, **32 validators/gates**, **30 registered checks**, **43 routing rows**, **36 runbooks including the template**, **24 graph-engineering documents**, and **CORE-01..CORE-38** unchanged as the product rule range. EN router is 195 lines; ID router is 194 lines, both under the 195-line ceiling.
+Per language edition: **201 files**, **46 Python scripts**, **32 validators/gates**, **30 registered checks**, **43 routing rows**, **36 runbooks including the template**, **24 graph-engineering documents**, and **CORE-01..CORE-38** unchanged as the product rule range. EN router is 195 lines; ID router is 194 lines, both under the 195-line ceiling.
 
 The docs bundle now contains **17 files** including this index and the model-adapter guide. Repository-template counts are measured independently from this documentation bundle.
 

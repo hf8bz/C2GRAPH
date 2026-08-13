@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version scope: this reference describes the C2GRAPH `v1.0.0` Version 1 release, dated **12 August 2026**.
+> Version scope: this reference describes the C2GRAPH `v1.1.0` Version 1 release, dated **13 August 2026**.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -408,4 +408,4 @@ For the full prevention, containment, PHASE 3 resolution, reporting, and regress
 
 ## Model adapter / cache boundary
 
-Current adapter-integrated v1.0.0 measurements are 198 files, 46 Python scripts, 32 validators/gates, 30 registered checks and 43 routes per edition. Adapter engineering revision is v0.4.1; the C2GRAPH product version remains v1.0.0. Cache hits are non-authoritative. Production capability admission may require live evidence, cache-aware evidence and runtime-contract verification.
+Current adapter-integrated v1.1.0 measurements are 199 files, 46 Python scripts, 32 validators/gates, 30 registered checks and 43 routes per edition. Adapter engineering revision is v0.5.5; the C2GRAPH product version remains v1.1.0. Cache hits are non-authoritative. Production capability admission may require live evidence, cache-aware evidence and runtime-contract verification.

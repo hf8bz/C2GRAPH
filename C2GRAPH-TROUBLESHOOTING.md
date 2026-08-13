@@ -39,7 +39,7 @@ exposure. See [C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md](C2GRAPH-SECRET-SAFETY-PHAS
 
 # C2GRAPH - troubleshooting and FAQ
 
-> Version scope: troubleshooting on this page targets the C2GRAPH `v1.0.0` Version 1 release dated **12 August 2026**.
+> Version scope: troubleshooting on this page targets the C2GRAPH `v1.1.0` Version 1 release dated **13 August 2026**.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -77,8 +77,8 @@ ignoring a written rule rather than the rule being absent.
 
 ## The run asked me a pile of questions at once
 
-Verify the archive and source tree against the v1.0.0 checksums, then run aggregate verification before changing
-workflow semantics. Open `AGENTS.md` and confirm that the source identifies C2GRAPH `v1.0.0`. A mismatched or
+Verify the archive and source tree against the v1.1.0 checksums, then run aggregate verification before changing
+workflow semantics. Open `AGENTS.md` and confirm that the source identifies C2GRAPH `v1.1.0`. A mismatched or
 locally modified tree can carry different prompt behavior, including instructions that send every question in one
 message.
 
@@ -186,7 +186,7 @@ cites an artifact. A claim without an artifact violates the fifth invariant.
 
 ## The router keeps getting longer
 
-There is a hard limit, `router_max_lines`, defaulting to 195. The v1.0.0 Version 1 release carries `AGENTS.md` at 195 lines in English and 194 lines in Indonesian. When
+There is a hard limit, `router_max_lines`, defaulting to 195. The v1.1.0 Version 1 release carries `AGENTS.md` at 195 lines in English and 194 lines in Indonesian. When
 the router grows, something that belongs in a scope or a runbook was written into it. That cost is paid
 on every single request, so the limit is a budget rather than a style preference. Move the new rule down
 a layer and leave a routing row behind.

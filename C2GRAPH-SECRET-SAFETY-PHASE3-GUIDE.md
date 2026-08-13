@@ -1,4 +1,4 @@
-# C2GRAPH v1.0.0 - CORE-33 Secret Safety and PHASE 3 Guide
+# C2GRAPH v1.1.0 - CORE-33 Secret Safety and PHASE 3 Guide
 > **CLI notation:** `<C2PY>` is documentation notation, not a literal command or shell assignment.
 > Resolve it for the current host/session using [C2GRAPH-CLI-LAUNCHER-GUIDE.md](C2GRAPH-CLI-LAUNCHER-GUIDE.md):
 > - POSIX: `/bin/sh "<C2GRAPH_SOURCE_ROOT>/scripts/c2python.sh"`
@@ -7,7 +7,7 @@
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
 > Canonical operator guide for secret-safe discovery and the single human stop boundary used by
-> CORE-33. This guide describes the contract shipped in the `v1.0.0` Version 1 release, dated **12 August 2026**; it is not a later-version change.
+> CORE-33. This guide describes the contract shipped in the `v1.1.0` Version 1 release, dated **13 August 2026**; it is not a later-version change.
 
 [Docs start](C2GRAPH-DOCS-START-HERE.md) - [Workflow-only guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) - [Safe GATE 0](C2GRAPH-SAFE-GATE0-ROLLBACK-GUIDE.md) - [Reference](C2GRAPH-REFERENCE.md) - [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md)
 

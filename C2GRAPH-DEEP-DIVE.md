@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version scope: this deep dive describes mechanisms shipped together in the C2GRAPH `v1.0.0` Version 1 release, dated **12 August 2026**. 
+> Version scope: this deep dive describes mechanisms shipped together in the C2GRAPH `v1.1.0` Version 1 release, dated **13 August 2026**. 
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -436,7 +436,7 @@ Resume through Prompt 97 re-resolves `C2PY`, validates/echoes the newest capsule
 
 ## The read boundary is now engineered
 
-C2GRAPH v1.0.0 constrains discovery semantically and also applies a physical ingestion boundary. Unknown/large text
+C2GRAPH v1.1.0 constrains discovery semantically and also applies a physical ingestion boundary. Unknown/large text
 is converted into bounded evidence under independent line, UTF-8 byte, and per-physical-line ceilings. Human coordinates remain `(line, char)`, but emitted Bounded Read v2 continuations bind exact source-byte offset,
 source generation, ceiling profile, sequence, and previous-view digest. Generated continuations seek directly from
 the recorded offset, and the default fourth blind sequential window requires strategy review. Typed outcomes

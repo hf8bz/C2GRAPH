@@ -1,6 +1,6 @@
 # C2GRAPH — Current File Map
 
-> Version scope: C2GRAPH `v1.0.0`, Version 1 release, adapter-integrated source: **198 files per EN/ID edition** plus the separate **17-file documentation bundle**.
+> Version scope: C2GRAPH `v1.1.0`, Version 1 release, adapter-integrated source: **201 files per EN/ID edition** plus the separate **17-file documentation bundle**.
 
 The EN and ID editions have the same relative-path set. Localized prose differs; executable adapter and verification code is checked for parity.
 
@@ -111,7 +111,7 @@ The EN and ID editions have the same relative-path set. Localized prose differs;
 | `adapters/c2modeladapter/c2modeladapter/structured.py` | Reference adapter implementation module for protocol/runtime/cache normalization. |
 | `adapters/c2modeladapter/c2modeladapter/types.py` | Reference adapter implementation module for protocol/runtime/cache normalization. |
 | `adapters/c2modeladapter/c2modeladapter/validation.py` | Reference adapter implementation module for protocol/runtime/cache normalization. |
-| `adapters/c2modeladapter/pyproject.toml` | Reference adapter Python package metadata; engineering revision v0.4.1. |
+| `adapters/c2modeladapter/pyproject.toml` | Reference adapter Python package metadata; engineering revision v0.5.5. |
 | `adapters/c2modeladapter/simulation/run_simulation.py` | Deterministic/randomized protocol and cache-plan simulation harness. |
 | `adapters/c2modeladapter/simulation/simulation-results.json` | Shipped configuration, schema, ledger example or generated measurement surface. |
 | `adapters/c2modeladapter/tests/test_adapter.py` | Reference adapter unit/regression tests. |
@@ -208,7 +208,7 @@ The EN and ID editions have the same relative-path set. Localized prose differs;
 
 ## Current verification snapshot
 
-- Files per edition: **198**
+- Files per edition: **201**
 - Python scripts: **46**
 - Validators/gates: **32**
 - Registered checks: **30**

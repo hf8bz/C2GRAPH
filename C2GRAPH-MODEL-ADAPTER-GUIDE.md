@@ -1,7 +1,7 @@
 # C2GRAPH Model Adapter and Cache-Aware Boundary Guide
 
-**Product release:** C2GRAPH v1.0.0 — Version 1 release.  
-**Engineering adapter revision:** C2ModelAdapter v0.4.1.  
+**Product release:** C2GRAPH v1.1.0 — Version 1 release.  
+**Engineering adapter revision:** C2ModelAdapter v0.5.5.  
 **Scope:** host-side protocol/runtime/cache compatibility. The adapter does not become C2GRAPH write authority.
 
 ## 1. Why this layer exists
@@ -56,9 +56,9 @@ Standalone adapter engineering tests are under `adapters/c2modeladapter/`. They 
 
 ## 7. Measured integration snapshot
 
-Per language edition in the adapter-integrated v1.0.0 tree: 198 distributed files, 46 shipped Python scripts, 32 validators/gates, 30 registered checks, 43 routing rows, 36 runbooks including the template, and 24 graph-engineering documents. CORE remains contiguous at CORE-01..CORE-38.
+Per language edition in the adapter-integrated v1.1.0 tree: 201 distributed files, 46 shipped Python scripts, 32 validators/gates, 30 registered checks, 43 routing rows, 36 runbooks including the template, and 24 graph-engineering documents. CORE remains contiguous at CORE-01..CORE-38.
 
-The model-adapter selftest executed 23/23 cases per edition. The standalone reference adapter executed 33 pytest cases, 20,000/20,000 randomized structural cases and 10,000/10,000 randomized cache-plan cases in the recorded audit. These are protocol/process tests, not a live paid-provider benchmark.
+The current model-adapter admission selftest executes 30/30 cases per edition. Standalone C2ModelAdapter v0.5.5 executes 66/66 unit cases, 30,005/30,005 deterministic opaque-combo cases, and 50,001/50,001 effective-route cases. The effective-route suite explicitly checks Luna route aliases and cross-family rebinding; the opaque-combo suite checks portable client-function history, target-specific retry preparation, and semantic-success handling. These are finite protocol/process tests, not a live paid-provider benchmark.
 
 ## 8. Non-claims
 
@@ -74,3 +74,8 @@ The adapter is not claimed to improve semantic reasoning, choose the correct too
 - vLLM automatic prefix caching: `https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/`
 
 The release evidence records the audit date and claim boundary; operators should revalidate provider documentation before changing cache fields.
+
+
+## Effective-route alias authority and combo fallback
+
+The requested combo name is provenance only. The effective model together with a verified provider/API surface chooses the active family contract. Thus `gpt-5.6-lunaXX` may remain canonical `gpt-5.6-luna` for tooling/cache semantics while the physical alias remains cache-isolated. If the same logical combo actually selects DeepSeek, the active profile, tooling, reasoning requirements, and cache plan are rebound to DeepSeek. Unknown/ambiguous effective routes fail closed. Opaque heterogeneous combos additionally remove provider-owned continuation state, clone requests per target, preserve only completed semantic client-function correlation, and require semantic output before an attempt is committed.

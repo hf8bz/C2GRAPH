@@ -1,6 +1,6 @@
-# C2GRAPH v1.0.0 — bounded evidence read guide
+# C2GRAPH v1.1.0 — bounded evidence read guide
 
-`v1.0.0` is the **C2GRAPH Version 1 release**, dated **12 August 2026**. Bounded evidence read is part of that release baseline; it is
+`v1.1.0` is the **C2GRAPH Version 1 release**, dated **13 August 2026**. Bounded evidence read is part of that release baseline; it is
 not a maintenance add-on. The layer controls how repository bytes become agent evidence without replacing goal,
 backup, rollback, secret, pre-write, or effect-time authority.
 
@@ -76,7 +76,7 @@ is **not** promoted into proof that the keyword is absent from the complete arti
 
 This experiment is intentionally narrow. **Plain/no-repo** means Python
 `Path.read_text(encoding="utf-8", errors="strict")` over the whole file with no C2Graph policy. **With C2Graph**
-means the optimized Bounded Read v2 implementation in the released v1.0.0 baseline. Three benchmark rounds
+means the optimized Bounded Read v2 implementation in the released v1.1.0 baseline. Three benchmark rounds
 (811-813) used five timing repetitions and two `tracemalloc` peak repetitions per reader/fixture/round. Table values
 are medians of the per-round medians. These are local Python measurements, not production latency, process RSS,
 model-token usage, billing, or task-quality measurements.
@@ -152,13 +152,13 @@ refuses it before returning the secret value.
 
 ## Bounded Read v2 hardening
 
-The released v1.0.0 baseline keeps the three original per-view ceilings and adds a second bound at read-intent level.
+The released v1.1.0 baseline keeps the three original per-view ceilings and adds a second bound at read-intent level.
 Three sequential windows are permitted by default; a fourth blind page returns `STRATEGY_REVIEW_REQUIRED`. The
 caller must switch to search/range/tail/parser/stream evaluation or explicitly justify continued sequential inspection.
 The threshold is a shipped policy default, not an empirically proven optimum.
 
 Generated continuation cursors seek directly from their exact source offset. Legacy arbitrary `(line,char)` starts
-still need a bounded scan to locate the first source byte, so the v1.0.0 release does not claim O(1) arbitrary seek or
+still need a bounded scan to locate the first source byte, so the v1.1.0 release does not claim O(1) arbitrary seek or
 universal latency improvement. The generation digest detects the tested local source drift classes; it is not a
 digital signature, immutable snapshot, or proof against all filesystems and same-user races.
 

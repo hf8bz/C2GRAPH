@@ -1,4 +1,4 @@
-# C2GRAPH v1.0.0 - Actual Write Plan & Rollback Authority Guide
+# C2GRAPH v1.1.0 - Actual Write Plan & Rollback Authority Guide
 > **CLI notation:** `<C2PY>` is documentation notation, not a literal command or shell assignment.
 > Resolve it for the current host/session using [C2GRAPH-CLI-LAUNCHER-GUIDE.md](C2GRAPH-CLI-LAUNCHER-GUIDE.md):
 > - POSIX: `/bin/sh "<C2GRAPH_SOURCE_ROOT>/scripts/c2python.sh"`
@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Release baseline: this contract is part of the C2GRAPH Version 1 release, `v1.0.0`, dated **12 August 2026**.
+> Release baseline: this contract is part of the C2GRAPH Version 1 release, `v1.1.0`, dated **13 August 2026**.
 
 > Purpose: prevent false PHASE 3 blockers by computing rollback authority from the exact bytes-changing
 > target write plan, not from preliminary collision counts or audit-record persistence.

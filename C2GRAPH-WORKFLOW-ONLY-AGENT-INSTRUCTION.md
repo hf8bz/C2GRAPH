@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version 1 release status: this operator instruction targets the `WORKFLOW_ONLY` entry point included in C2GRAPH `v1.0.0`, released **12 August 2026**.
+> Version 1 release status: this operator instruction targets the `WORKFLOW_ONLY` entry point included in C2GRAPH `v1.1.0`, released **13 August 2026**.
 
 > Copy-paste contract for an agent that must install, repair, upgrade, or verify C2GRAPH in an existing non-empty repository without requiring or creating a goal.
 
