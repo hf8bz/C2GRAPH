@@ -8,13 +8,13 @@ C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, 
 
 [![Release](https://img.shields.io/badge/release-v1.1.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Paper DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21905651-blue)](https://doi.org/10.5281/zenodo.21905651)
-[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.21906534-blue)](https://doi.org/10.5281/zenodo.21906534)
+[![Paper DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21922284-blue)](https://doi.org/10.5281/zenodo.21922284)
+[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.21922219-blue)](https://doi.org/10.5281/zenodo.21922219)
 
 **Version 1.1.0 · Current release · 13 August 2026**
 
 [Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0) ·
-[Research Paper](https://doi.org/10.5281/zenodo.21905651) ·
+[Research Paper](https://doi.org/10.5281/zenodo.21922284) ·
 [Deep Dive](C2GRAPH-DEEP-DIVE.md) ·
 [Start Here](C2GRAPH-DOCS-START-HERE.md) ·
 [Reference](C2GRAPH-REFERENCE.md)
@@ -1132,13 +1132,13 @@ The governance model is intended to sit around the engineering workflow rather t
 
 DOI:
 
-**https://doi.org/10.5281/zenodo.21905651**
+**https://doi.org/10.5281/zenodo.21922284**
 
 ### Software archive
 
 Current archived software record (v1.0.0 at the time this README was updated):
 
-**https://doi.org/10.5281/zenodo.21906534**
+**https://doi.org/10.5281/zenodo.21922219**
 
 ### Citation
 
