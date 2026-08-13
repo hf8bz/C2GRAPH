@@ -6,14 +6,14 @@
 
 C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, resumable, reversible, and auditable** by moving critical execution state out of transient conversation history and into explicit repository contracts.
 
-[![Release](https://img.shields.io/badge/release-v1.0.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/badge/release-v1.1.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Paper DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21905651-blue)](https://doi.org/10.5281/zenodo.21905651)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.21906534-blue)](https://doi.org/10.5281/zenodo.21906534)
 
-**Version 1 · First public release · 12 August 2026**
+**Version 1.1.0 · Current release · 13 August 2026**
 
-[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.0.0) ·
+[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0) ·
 [Research Paper](https://doi.org/10.5281/zenodo.21905651) ·
 [Deep Dive](C2GRAPH-DEEP-DIVE.md) ·
 [Start Here](C2GRAPH-DOCS-START-HERE.md) ·
@@ -675,7 +675,7 @@ Ambiguity remains ambiguity rather than being converted into an invented procedu
 
 # Runtime-scoped model adapter
 
-C2GRAPH v1.0.0 includes a host-side model-adapter boundary for structured model/tool interaction.
+C2GRAPH v1.1.0 includes **C2ModelAdapter v0.5.5** as the host-side model-adapter boundary for structured model/tool interaction.
 
 The adapter can normalize runtime/provider differences around:
 
@@ -691,6 +691,39 @@ The adapter can normalize runtime/provider differences around:
 Unknown model/runtime combinations are not automatically trusted merely because their names resemble a supported model.
 
 Unsupported or unverified combinations can fail closed.
+
+### Current verified model/provider profiles
+
+C2ModelAdapter v0.5.5 separates the stable API-facing model identifier from the
+served model revision when a provider upgrades the backend without requiring a
+new public API model string.
+
+* **DeepSeek V4 Pro — V4-Pro-0813.** API calls continue to use
+  `deepseek-v4-pro`. The profile covers tool calls, JSON output,
+  thinking/non-thinking modes, and provider-scoped reasoning/cache handling.
+* **DeepSeek V4 Flash — V4-Flash-0731.** API calls continue to use
+  `deepseek-v4-flash`, with the same provider-scoped tool/reasoning/cache
+  boundary.
+* **OpenAI GPT-5.6 Luna.** `gpt-5.6-luna` and bounded physical aliases such as
+  `gpt-5.6-lunaXX` resolve to the Luna tooling/cache family while the physical
+  route remains part of cache isolation.
+* **OpenAI GPT-5.6 Sol / Terra.** Verified identities remain provider and
+  API-surface scoped.
+* **xAI Grok 4.5.** `grok-4.5`, `grok-4.5-latest`, and `grok-build-latest`
+  use the current verified xAI profile.
+* **xAI Grok 4.6.** `grok-4.6*` remains watch/quarantine and fails closed until
+  an official 4.6 API/tool/cache contract is verified.
+
+For DeepSeek, **0813 and 0731 are revision labels, not replacement API model
+strings**. C2GRAPH therefore does not invent model IDs such as
+`deepseek-v4-pro-0813` unless DeepSeek explicitly exposes that identifier in the
+API contract.
+
+For heterogeneous router combos, the logical combo name is provenance only.
+If a Luna-first combo falls back to an effective DeepSeek route, the adapter
+rebinds tooling, reasoning, and cache behavior to DeepSeek and does not replay
+Luna-owned Responses item IDs, reasoning state, continuation handles, or cache
+state into the DeepSeek attempt.
 
 See:
 
@@ -1005,7 +1038,7 @@ It does not override those executable contracts.
 ---
 
 <details>
-<summary><strong>Full C2GRAPH v1.0.0 capability map</strong></summary>
+<summary><strong>Full C2GRAPH v1.1.0 capability map</strong></summary>
 
 Version 1 includes the following major capability families:
 
@@ -1046,7 +1079,7 @@ Version 1 includes the following major capability families:
 
 See the full explanations in the:
 
-**[v1.0.0 Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.0.0)**
+**[v1.1.0 Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0)**
 
 </details>
 
@@ -1103,7 +1136,7 @@ DOI:
 
 ### Software archive
 
-C2GRAPH v1.0.0:
+Current archived software record (v1.0.0 at the time this README was updated):
 
 **https://doi.org/10.5281/zenodo.21906534**
 
@@ -1117,11 +1150,11 @@ If you use C2GRAPH in research, please use the repository's:
 
 # Release
 
-**C2GRAPH v1.0.0 — Version 1 / First Public Release**
+**C2GRAPH v1.1.0 — Current Release**
 
 Full release notes:
 
-https://github.com/hf8bz/C2GRAPH/releases/tag/v1.0.0
+https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0
 
 Repository:
 
