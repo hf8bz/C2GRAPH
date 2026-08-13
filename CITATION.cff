@@ -9,11 +9,11 @@ type: software
 
 title: "C2GRAPH"
 
-version: "1.0.0"
+version: "1.1.0"
 
-date-released: "2026-08-12"
+date-released: "2026-08-13"
 
-doi: "10.5281/zenodo.21906534"
+doi: "10.5281/zenodo.21922219"
 
 authors:
   - family-names: "Al-Banna"
@@ -21,7 +21,7 @@ authors:
 
 repository-code: "https://github.com/hf8bz/C2GRAPH"
 
-repository: "https://doi.org/10.5281/zenodo.21906534"
+repository: "https://doi.org/10.5281/zenodo.21922219"
 
 url: "https://github.com/hf8bz/C2GRAPH"
 
@@ -57,13 +57,13 @@ preferred-citation:
     - family-names: "Al-Banna"
       given-names: "Hafizh"
 
-  doi: "10.5281/zenodo.21905651"
+  doi: "10.5281/zenodo.21922284"
 
-  url: "https://doi.org/10.5281/zenodo.21905651"
+  url: "https://doi.org/10.5281/zenodo.21922284"
 
   year: 2026
 
-  date-published: "2026-08-12"
+  date-published: "2026-08-13"
 
   status: preprint
 
