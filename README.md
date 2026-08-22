@@ -6,15 +6,17 @@
 
 C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, resumable, reversible, and auditable** by moving critical execution state out of transient conversation history and into explicit repository contracts.
 
-[![Release](https://img.shields.io/badge/release-v1.1.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0)
+[![Release](https://img.shields.io/badge/release-v1.2.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Paper DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21922284-blue)](https://doi.org/10.5281/zenodo.21922284)
-[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.21922219-blue)](https://doi.org/10.5281/zenodo.21922219)
+[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.22058066-blue)](https://doi.org/10.5281/zenodo.22058066)
+[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.22058130-blue)](https://doi.org/10.5281/zenodo.22058130)
+[![Source checks](https://img.shields.io/badge/source_checks-39%2F39_EN_%7C_39%2F39_ID-brightgreen)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0)
 
-**Version 1.1.0 · Current release · 13 August 2026**
+**Version 1.2.0 · Current release · 22 August 2026**
 
-[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0) ·
-[Research Paper](https://doi.org/10.5281/zenodo.21922284) ·
+[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0) ·
+[Research Paper](https://doi.org/10.5281/zenodo.22058066) ·
+[Software Archive](https://doi.org/10.5281/zenodo.22058130) ·
 [Deep Dive](C2GRAPH-DEEP-DIVE.md) ·
 [Start Here](C2GRAPH-DOCS-START-HERE.md) ·
 [Reference](C2GRAPH-REFERENCE.md)
@@ -130,6 +132,36 @@ Failures, corrections, lessons, discoveries, decisions, and continuation state c
 ### 4. Compatibility Without Authority Leakage
 
 Provider-specific model behavior, tool-call formats, reasoning state, and cache controls remain at the host/runtime adapter boundary rather than silently becoming repository authority.
+
+---
+
+# What changed in v1.2.0
+
+v1.2.0 is a backward-compatible Version 1 capability release. It does **not** replace the canonical write predicate; exact semantic scope, `ACTUAL_WRITE_SET`, rollback readiness, and fresh pre-state remain the basis for repository mutation.
+
+### Bounded Emergency Authorization (BEA v2)
+
+BEA v2 provides a short-lived, human-granted emergency overlay for an already materialized exact write plan. It is bound to exact action/target identity, rollback basis, run/session, and temporal validity. It does not create wildcard emergency authority.
+
+### Adaptive Context Representation Planning (ACRP)
+
+ACRP can change how an already selected and frozen semantic evidence set is represented to the effective model. It does not change semantic-set membership, promote cache/model telemetry into evidence, or widen repository authority. Native representation remains the safe default when the required profile evidence is unavailable.
+
+### C2GRAPH-native Cognitive Emergency Authorization (CEA)
+
+CEA provides bounded external containment for exact recalled failure/lesson objects. It can suppress the actionability of a recalled object without rewriting the underlying repository evidence and without creating repository-write authority.
+
+### Progress Liveness & Bounded Self-Audit
+
+C2GRAPH can distinguish semantic progress from visible activity, benign external waits, long-running work, accounting inconsistency, and stagnation. Recovery remains advisory and bounded: a liveness finding cannot create a new write row. Runtime-state validation is strict about JSON number/integer types and rejects numeric strings, invalid fractional integers, and non-finite values where the contract requires actual numeric state.
+
+### Handoff telemetry integrity
+
+Current checkpoint rows are immutable. Resume telemetry is represented as a separate event, and persistence of that event remains subject to the same repository write-authority discipline as any other repository mutation. Exact rehydration measurements use declared exact counters; when no exact counter exists, the measurement is recorded as unavailable rather than estimated.
+
+### Authority non-interference
+
+Routing/cache state, ACRP mode, CEA containment, incident severity, and liveness classification can influence strategy or diagnosis, but they do not widen the canonical exact-write authority.
 
 ---
 
@@ -675,7 +707,7 @@ Ambiguity remains ambiguity rather than being converted into an invented procedu
 
 # Runtime-scoped model adapter
 
-C2GRAPH v1.1.0 includes **C2ModelAdapter v0.5.5** as the host-side model-adapter boundary for structured model/tool interaction.
+C2GRAPH v1.2.0 continues to ship **C2ModelAdapter v0.5.5** as the host-side model-adapter boundary for structured model/tool interaction.
 
 The adapter can normalize runtime/provider differences around:
 
@@ -1038,7 +1070,7 @@ It does not override those executable contracts.
 ---
 
 <details>
-<summary><strong>Full C2GRAPH v1.1.0 capability map</strong></summary>
+<summary><strong>Full C2GRAPH v1.2.0 capability map</strong></summary>
 
 Version 1 includes the following major capability families:
 
@@ -1076,10 +1108,17 @@ Version 1 includes the following major capability families:
 32. Centralized configuration
 33. Evidence-first reporting
 34. Bilingual release surface
+35. Bounded Emergency Authorization (BEA v2)
+36. Adaptive Context Representation Planning (ACRP)
+37. C2GRAPH-native Cognitive Emergency Authorization (CEA)
+38. Progress Liveness & Bounded Self-Audit
+39. Strict runtime-state numeric validation
+40. Cross-plane authority non-interference
+41. Handoff event-ledger integrity and authority-gated resume telemetry
 
 See the full explanations in the:
 
-**[v1.1.0 Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0)**
+**[v1.2.0 Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0)**
 
 </details>
 
@@ -1126,19 +1165,32 @@ The governance model is intended to sit around the engineering workflow rather t
 
 # Research
 
-### Research paper
+### Current v1.2.0 research paper
 
-**C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents**
+**C2GRAPH: Compositional Repository Governance for Long-Horizon AI Coding Agents**
 
-DOI:
+The current English and Indonesian manuscripts are publication-dated **22 August 2026 / 22 Agustus 2026**, authored by **Hafizh Albanna**, and archived under the v1.2.0 paper DOI:
 
-**https://doi.org/10.5281/zenodo.21922284**
+**[10.5281/zenodo.22058066](https://doi.org/10.5281/zenodo.22058066)**
 
-### Software archive
+The paper record contains the bilingual current manuscript files and is licensed **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
-Current archived software record (v1.0.0 at the time this README was updated):
+### Current v1.2.0 software archive
 
-**https://doi.org/10.5281/zenodo.21922219**
+**C2GRAPH v1.2.0 — Bounded Authority, Adaptive Context & Progress Self-Audit**
+
+The v1.2.0 software/application archive is identified by:
+
+**[10.5281/zenodo.22058130](https://doi.org/10.5281/zenodo.22058130)**
+
+The software release is version `1.2.0`, released **22 August 2026**, authored by **Hafizh Albanna**, and distributed under the **MIT License**.
+
+### Historical DOI records
+
+Earlier records remain historical provenance for prior C2GRAPH states and are not the canonical identifiers for v1.2.0:
+
+* earlier research-paper record: **https://doi.org/10.5281/zenodo.21922284**
+* earlier software archive: **https://doi.org/10.5281/zenodo.21922219**
 
 ### Citation
 
@@ -1146,19 +1198,7 @@ If you use C2GRAPH in research, please use the repository's:
 
 **[CITATION.cff](CITATION.cff)**
 
----
-
-# Release
-
-**C2GRAPH v1.1.0 — Current Release**
-
-Full release notes:
-
-https://github.com/hf8bz/C2GRAPH/releases/tag/v1.1.0
-
-Repository:
-
-https://github.com/hf8bz/C2GRAPH
+The v1.2.0 citation metadata identifies software DOI **10.5281/zenodo.22058130** and uses the paper DOI **10.5281/zenodo.22058066** as the preferred research citation, with version `1.2.0`, release date `2026-08-22`, and author **Hafizh Albanna**.
 
 ---
 
@@ -1174,7 +1214,7 @@ See:
 
 # Author
 
-**Hafizh Al-Banna**
+**Hafizh Albanna**
 
 LinkedIn:
 
