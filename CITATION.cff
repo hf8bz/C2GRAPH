@@ -1,71 +1,81 @@
 cff-version: 1.2.0
 
 message: >-
-  If you use C2GRAPH in research, please cite the academic paper
-  listed in preferred-citation and cite the software release
-  when appropriate.
+  If you use C2GRAPH, please cite this v1.2.0 software release.
+  For research use, also cite the academic paper listed in preferred-citation.
 
 type: software
 
-title: "C2GRAPH"
+title: "C2GRAPH: Convert to Graph Engineering"
 
-version: "1.1.0"
+version: "1.2.0"
 
-date-released: "2026-08-13"
+date-released: "2026-08-22"
 
-doi: "10.5281/zenodo.21922219"
+doi: "10.5281/zenodo.22058130"
 
 authors:
-  - family-names: "Al-Banna"
+  - family-names: "Albanna"
     given-names: "Hafizh"
+    affiliation: "PT Arshaka Digital Media Kreasi"
 
 repository-code: "https://github.com/hf8bz/C2GRAPH"
-
-repository: "https://doi.org/10.5281/zenodo.21922219"
-
+repository: "https://doi.org/10.5281/zenodo.22058130"
 url: "https://github.com/hf8bz/C2GRAPH"
 
 license: MIT
 
 abstract: >-
-  C2GRAPH is a repository-level governance framework for AI coding agents.
-  It externalizes operational constraints such as goal state, evidence,
-  write authority, rollback scope, context budget, handoff, provenance,
-  tool discipline, failure memory, and verification into persistent
-  repository-level control structures.
+  C2GRAPH (Convert to Graph Engineering) is a repository-level governance
+  package for long-running AI coding agents. It moves selected execution
+  state out of transient conversation history and into explicit repository
+  contracts so that objectives, evidence, semantic scope, exact write
+  authority, rollback and freshness, continuity, provenance, model/runtime
+  adaptation, and verification can be inspected independently. Version 1.2.0
+  adds Bounded Emergency Authorization v2, Adaptive Context Representation
+  Planning, C2GRAPH-native Cognitive Emergency Authorization, Progress
+  Liveness & Bounded Self-Audit, stricter runtime-state validation, handoff
+  telemetry hardening, and authority non-interference while preserving the
+  canonical mutation contract.
 
 keywords:
   - "C2GRAPH"
   - "Graph Engineering"
-  - "AI Coding Agents"
-  - "Agentic Software Engineering"
-  - "Software Engineering"
-  - "Repository Governance"
-  - "AI Agent Governance"
+  - "AI coding agents"
+  - "Agentic software engineering"
+  - "Repository governance"
+  - "AI agent governance"
+  - "Bounded authority"
+  - "Bounded Evidence Read"
+  - "Authority non-interference"
+  - "Adaptive context representation"
+  - "Progress liveness"
+  - "Self-audit"
   - "Provenance"
   - "Reproducibility"
   - "Verification"
-  - "Bounded Read"
-  - "Context Management"
+  - "Context management"
 
 preferred-citation:
   type: article
 
-  title: "C2GRAPH: A Repository-Level Governance Package for Disciplined, Measurable AI Coding Agents"
+  title: "C2GRAPH: Compositional Repository Governance for Long-Horizon AI Coding Agents"
 
   authors:
-    - family-names: "Al-Banna"
+    - family-names: "Albanna"
       given-names: "Hafizh"
+      affiliation: "PT Arshaka Digital Media Kreasi"
 
-  doi: "10.5281/zenodo.21922284"
-
-  url: "https://doi.org/10.5281/zenodo.21922284"
+  doi: "10.5281/zenodo.22058066"
+  url: "https://doi.org/10.5281/zenodo.22058066"
 
   year: 2026
-
-  date-published: "2026-08-13"
-
+  date-published: "2026-08-22"
   status: preprint
+  license: CC-BY-4.0
+  languages:
+    - en
+    - id
 
   publisher:
     name: "Zenodo"
