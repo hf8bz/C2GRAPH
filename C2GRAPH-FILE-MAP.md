@@ -1,8 +1,11 @@
 # C2GRAPH — Current File Map
 
-> Version scope: C2GRAPH `v1.1.0`, Version 1 release, adapter-integrated source: **201 files per EN/ID edition** plus the separate **17-file documentation bundle**.
+> Version scope: C2GRAPH `v1.2.0`, with historical v1.1.0 references retained only where they explain provenance. The
+> candidate includes BEA v2, ACRP, CEA, Progress Liveness & Bounded Self-Audit, and the 19 August hardening. It
+> contains **228 distributed files per EN/ID edition** plus the separate **26-file Markdown documentation bundle**.
 
-The EN and ID editions have the same relative-path set. Localized prose differs; executable adapter and verification code is checked for parity.
+The EN and ID editions have the same relative-path set. Localized prose differs; executable adapter and verification
+code is checked for parity.
 
 | Relative path | Purpose |
 | --- | --- |
@@ -208,13 +211,37 @@ The EN and ID editions have the same relative-path set. Localized prose differs;
 
 ## Current verification snapshot
 
-- Files per edition: **201**
-- Python scripts: **46**
-- Validators/gates: **32**
-- Registered checks: **30**
-- Routing rows: **43**
-- Runbooks: **36** including template
-- Graph-engineering docs: **24**
-- CORE rules: **CORE-01..CORE-38** contiguous
+- Files per edition: **228**
+- Python scripts: **64**
+- Validators/gates: **37**
+- Registered checks: **39**
+- Routing rows: **45**
+- Runbooks: **40** including template (**39** non-template)
+- Graph-engineering docs: **27**
+- CORE rules: **CORE-01..CORE-39** contiguous
 
 The authoritative live count remains `<C2PY> scripts/verify/counts.py --json`.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.
+
+## C2GRAPH v1.2.0 ACRP and CEA
+
+- `C2GRAPH-ACRP-GUIDE.md` / `C2GRAPH-ACRP-GUIDE-ID.md` - adaptive representation after frozen bounded selection.
+- `C2GRAPH-CEA-GUIDE.md` / `C2GRAPH-CEA-GUIDE-ID.md` - exact external containment for poisoned failure/lesson recall.
+- CEA, ACRP, cache, and effective model routing never expand BEA authority.
+
+## Progress liveness and bounded self-audit
+
+C2GRAPH v1.2.0 adds a semantic-progress watchdog without turning activity into completion evidence.
+It compares accepted progress snapshots, distinguishes valid external waits and declared long-running actions from
+livelock, and can launch bounded read-only audit lanes. Diagnostic workers are advisory and `canonical_write=false`;
+the C2GRAPH-specific audit fan-out is capped separately from the existing canonical execution-writer limit.
+Repository-changing recovery never self-authorizes: normal semantic scope, PHASE 3.W `ACTUAL_WRITE_SET`, rollback
+basis, immediate freshness, and effect verification remain mandatory. See
+`C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md` and the Indonesian companion.

@@ -6,7 +6,8 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version scope: this deep dive describes mechanisms shipped together in the C2GRAPH `v1.1.0` Version 1 release, dated **13 August 2026**. 
+> Version scope: C2GRAPH `v1.2.0` is the current Version 1 minor release dated **22 August 2026**. This deep dive
+> distinguishes v1.2.0 mechanisms from historical v1.1.0 evidence rather than rewriting release history.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -235,8 +236,10 @@ The template treats the reset as a scheduled event. Context-pressure thresholds 
 checkpoint, and the workflow also refreshes continuity at its configured step cadence. Continuity is
 always captured in session/transcript evidence as `C2GRAPH_RESUME_CAPSULE v1`. The three durable
 target artifacts--`HANDOFF.md`, `handoff.jsonl`, and `CURSOR.json`--are persisted only when their exact
-post-PHASE-3.W actions are semantically required, path-scoped authorized, and fresh. When persisted,
-`CURSOR.json` is written last so a crash mid-write cannot point at work that was not recorded.
+post-PHASE-3.W actions are semantically required, path-scoped authorized, and fresh. Current checkpoint rows
+in `handoff.jsonl` are immutable; later exact resume measurements are separate `resume_event` rows and are persisted
+only under the same exact-write gates (otherwise they remain session/host evidence). `CURSOR.json` is written last
+so a crash mid-write cannot point at work that was not recorded.
 
 The handoff operation is capped at eight tool calls because continuity must fit inside the reserved
 resource budget. If the budget/context/rate/session boundary is reached, the outcome is
@@ -436,7 +439,7 @@ Resume through Prompt 97 re-resolves `C2PY`, validates/echoes the newest capsule
 
 ## The read boundary is now engineered
 
-C2GRAPH v1.1.0 constrains discovery semantically and also applies a physical ingestion boundary. Unknown/large text
+C2GRAPH v1.2.0 retains the semantic discovery constraints and physical ingestion boundary introduced in v1.1.0. Unknown/large text
 is converted into bounded evidence under independent line, UTF-8 byte, and per-physical-line ceilings. Human coordinates remain `(line, char)`, but emitted Bounded Read v2 continuations bind exact source-byte offset,
 source generation, ceiling profile, sequence, and previous-view digest. Generated continuations seek directly from
 the recorded offset, and the default fourth blind sequential window requires strategy review. Typed outcomes
@@ -447,3 +450,39 @@ do not become canonical repository state.
 ## Host model adapter as a non-authoritative compatibility layer
 
 C2GRAPH does not parse every provider protocol in its authority core. A host-side adapter normalizes structured tool calls, native identifiers, runtime parser capabilities and cache hints into a provider-neutral capability document. The C2GRAPH admission validator can fail closed on missing live/runtime/cache evidence, but it does not promote private reasoning, raw prompt prefixes or cache-routing keys into durable state. This keeps protocol compatibility and cache optimization orthogonal to goal/write authority.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.
+
+## C2GRAPH v1.2.0 ACRP and CEA
+
+- `C2GRAPH-ACRP-GUIDE.md` / `C2GRAPH-ACRP-GUIDE-ID.md` - adaptive representation after frozen bounded selection.
+- `C2GRAPH-CEA-GUIDE.md` / `C2GRAPH-CEA-GUIDE-ID.md` - exact external containment for poisoned failure/lesson recall.
+- CEA, ACRP, cache, and effective model routing never expand BEA authority.
+
+## Progress liveness and bounded self-audit
+
+C2GRAPH v1.2.0 adds a semantic-progress watchdog without turning activity into completion evidence. It compares accepted progress snapshots, distinguishes valid external waits and declared long-running actions from livelock, and can launch bounded read-only audit lanes. Diagnostic workers are advisory and `canonical_write=false`; the C2GRAPH-specific audit fan-out is capped separately from the existing canonical execution-writer limit. Repository-changing recovery never self-authorizes: normal semantic scope, PHASE 3.W `ACTUAL_WRITE_SET`, rollback basis, immediate freshness, and effect verification remain mandatory. See `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md` and the Indonesian companion.
+
+## 19 August 2026 academic re-audit boundary
+
+The C2GRAPH v1.2.0 release has 39/39 registered checks with explicit process-isolated PASS verdicts per
+edition. Directed high-risk evidence includes BEA 33/33, CEA 18/18, Bounded Evidence Read 56/56, ACRP 29/29 plus
+1,000 randomized round-trips, full-stack interactions 12/12 plus 5,000 randomized authority-invariance states,
+Progress Liveness 32/32, and embedded adapter admission 30/30 per edition.
+
+The academic re-audit additionally enumerates the declared finite/equivalence domains: 4,194,304 authority states,
+1,572,864 implementation-level progress states per edition, 28,561 strict-numeric combinations per edition, 44,286
+ACRP codec cases per edition, and 752 bounded-read boundary cases per edition. The adapter-registry supplemental
+finite audit covers its declared pattern, endpoint, lifecycle, ordered profile-pair, alias-grammar, and unknown-suffix
+cases. These statements are exhaustive only over the explicitly declared finite domains.
+
+Two 19 August findings are closed: `C2G-PL-20260819-01` (strict numeric-boundary coercion) and
+`C2G-CEA-20260819-02` (CEA CLI-entry alias shadowing). Neither finding produced an observed path that widened
+repository-write authority. See `C2GRAPH-ACADEMIC-VALIDATION-GUIDE.md` for evidence-class definitions.
+

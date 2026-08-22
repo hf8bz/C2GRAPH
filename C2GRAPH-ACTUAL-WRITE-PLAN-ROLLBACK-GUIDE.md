@@ -1,4 +1,4 @@
-# C2GRAPH v1.1.0 - Actual Write Plan & Rollback Authority Guide
+# C2GRAPH v1.2.0 - Actual Write Plan & Rollback Authority Guide
 > **CLI notation:** `<C2PY>` is documentation notation, not a literal command or shell assignment.
 > Resolve it for the current host/session using [C2GRAPH-CLI-LAUNCHER-GUIDE.md](C2GRAPH-CLI-LAUNCHER-GUIDE.md):
 > - POSIX: `/bin/sh "<C2GRAPH_SOURCE_ROOT>/scripts/c2python.sh"`
@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Release baseline: this contract is part of the C2GRAPH Version 1 release, `v1.1.0`, dated **13 August 2026**.
+> Release scope: this contract is the canonical mutation basis in C2GRAPH `v1.2.0`. It originated in the v1.1.0 Version 1 baseline and remains authoritative for normal writes and BEA-bound emergency writes.
 
 > Purpose: prevent false PHASE 3 blockers by computing rollback authority from the exact bytes-changing
 > target write plan, not from preliminary collision counts or audit-record persistence.
@@ -508,3 +508,11 @@ Before the first write:
 - [ ] Any later new write path returns to PHASE 3.W.
 - [ ] Pending failures/claim limits are not counted as blockers merely because they are pending.
 - [ ] PHASE 4 stops only for a capability actually required with no safe approved fallback.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.

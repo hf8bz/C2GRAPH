@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Release baseline: this safety contract is part of the C2GRAPH Version 1 release, `v1.1.0`, dated **13 August 2026**.
+> Release scope: this safety contract remains active in C2GRAPH `v1.2.0`. It originated in the v1.1.0 Version 1 baseline and is unchanged as a prerequisite for the newer BEA/CEA/ACRP/progress planes.
 
 > Purpose: prevent discovery, bookkeeping, or "read-only-looking" commands from changing the target
 > repository before C2GRAPH has a proven rollback authority.

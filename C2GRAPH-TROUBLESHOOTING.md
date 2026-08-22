@@ -39,7 +39,7 @@ exposure. See [C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md](C2GRAPH-SECRET-SAFETY-PHAS
 
 # C2GRAPH - troubleshooting and FAQ
 
-> Version scope: troubleshooting on this page targets the C2GRAPH `v1.1.0` Version 1 release dated **13 August 2026**.
+> Version scope: troubleshooting on this page targets C2GRAPH `v1.2.0`. Historical v1.1.0 checksums remain useful only when validating an upgrade baseline.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -77,8 +77,8 @@ ignoring a written rule rather than the rule being absent.
 
 ## The run asked me a pile of questions at once
 
-Verify the archive and source tree against the v1.1.0 checksums, then run aggregate verification before changing
-workflow semantics. Open `AGENTS.md` and confirm that the source identifies C2GRAPH `v1.1.0`. A mismatched or
+Verify the archive and source tree against the v1.2.0 checksums, then run aggregate verification before changing
+workflow semantics. Open `AGENTS.md` and confirm that the source identifies C2GRAPH `v1.2.0`. A mismatched or
 locally modified tree can carry different prompt behavior, including instructions that send every question in one
 message.
 
@@ -186,7 +186,7 @@ cites an artifact. A claim without an artifact violates the fifth invariant.
 
 ## The router keeps getting longer
 
-There is a hard limit, `router_max_lines`, defaulting to 195. The v1.1.0 Version 1 release carries `AGENTS.md` at 195 lines in English and 194 lines in Indonesian. When
+There is a hard limit, `router_max_lines`, set to 210 for v1.2.0. The v1.2.0 release carries `AGENTS.md` at 205 lines in English and 204 lines in Indonesian. When
 the router grows, something that belongs in a scope or a runbook was written into it. That cost is paid
 on every single request, so the limit is a budget rather than a style preference. Move the new rule down
 a layer and leave a routing row behind.
@@ -546,3 +546,11 @@ or run a purpose-built complete check with an appropriate budget.
 
 Unicode normalization and invisible-space/quote variants are repaired only when one in-root file is unambiguous.
 When several candidates remain, select the path explicitly. A typo suggestion is never silently opened.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.

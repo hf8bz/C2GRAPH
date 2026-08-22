@@ -13,7 +13,7 @@ or host-session budget is exhausted. If the protocol waits until the hard limit 
 handoff, the run may close with no usable continuation state. Restarting SCAN from PHASE 0 then wastes
 verified work and can produce different decisions.
 
-C2GRAPH v1.1.0 therefore treats resource exhaustion as a **resumable suspension**, not a terminal task
+C2GRAPH v1.2.0 continues to treat resource exhaustion as a **resumable suspension**, not a terminal task
 failure.
 
 ## Two boundaries, not one

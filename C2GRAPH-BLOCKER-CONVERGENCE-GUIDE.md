@@ -1,4 +1,4 @@
-# C2GRAPH Blocker Convergence Guide -- v1.1.0
+# C2GRAPH Blocker Convergence Guide -- v1.2.0
 > **CLI notation:** `<C2PY>` is documentation notation, not a literal command or shell assignment.
 > Resolve it for the current host/session using [C2GRAPH-CLI-LAUNCHER-GUIDE.md](C2GRAPH-CLI-LAUNCHER-GUIDE.md):
 > - POSIX: `/bin/sh "<C2GRAPH_SOURCE_ROOT>/scripts/c2python.sh"`
@@ -278,3 +278,11 @@ A final release audit must independently test at least:
 No finite regression suite proves every possible host behavior. The release claim is limited to the
 explicit state space and fixtures executed by the audit, with real safety boundaries retained rather
 than bypassed to obtain a green result.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.

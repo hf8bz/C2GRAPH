@@ -1,6 +1,6 @@
 # C2GRAPH Model Adapter and Cache-Aware Boundary Guide
 
-**Product release:** C2GRAPH v1.1.0 — Version 1 release.  
+**Product release:** C2GRAPH v1.2.0 — Version 1 minor release.  
 **Engineering adapter revision:** C2ModelAdapter v0.5.5.  
 **Scope:** host-side protocol/runtime/cache compatibility. The adapter does not become C2GRAPH write authority.
 
@@ -56,9 +56,9 @@ Standalone adapter engineering tests are under `adapters/c2modeladapter/`. They 
 
 ## 7. Measured integration snapshot
 
-Per language edition in the adapter-integrated v1.1.0 tree: 201 distributed files, 46 shipped Python scripts, 32 validators/gates, 30 registered checks, 43 routing rows, 36 runbooks including the template, and 24 graph-engineering documents. CORE remains contiguous at CORE-01..CORE-38.
+The published v1.1.0 adapter boundary remains v0.5.5. In the current C2GRAPH v1.2.0 release, each language edition has 228 distributed files, 64 shipped Python scripts, 37 validators/gates, 39 registered checks, 45 routing rows, 40 runbooks including the template, and 27 graph-engineering documents. CORE is contiguous at CORE-01..CORE-39; CORE-39 adds cognitive-containment authority separation and does not change provider-adapter ownership.
 
-The current model-adapter admission selftest executes 30/30 cases per edition. Standalone C2ModelAdapter v0.5.5 executes 66/66 unit cases, 30,005/30,005 deterministic opaque-combo cases, and 50,001/50,001 effective-route cases. The effective-route suite explicitly checks Luna route aliases and cross-family rebinding; the opaque-combo suite checks portable client-function history, target-specific retry preparation, and semantic-success handling. These are finite protocol/process tests, not a live paid-provider benchmark.
+The current model-adapter admission selftest executes 30/30 cases per edition. Standalone C2ModelAdapter v0.5.5 executes 74/74 pytest cases, 30,005/30,005 deterministic opaque-combo cases, and 50,001/50,001 effective-route cases. The effective-route suite explicitly checks Luna route aliases and cross-family rebinding; the opaque-combo suite checks portable client-function history, target-specific retry preparation, and semantic-success handling. These are finite protocol/process tests, not a live paid-provider benchmark.
 
 ## 8. Non-claims
 

@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version 1 release status: `WORKFLOW_ONLY` is included in C2GRAPH `v1.1.0`, released **13 August 2026**. 
+> Version 1 release status: `WORKFLOW_ONLY` remains included in C2GRAPH `v1.2.0`; it was already present in the historical v1.1.0 release. 
 
 > Canonical operator guide for installing, repairing, upgrading, or verifying the C2GRAPH control plane in an existing non-empty repository without creating or requiring a new goal.
 

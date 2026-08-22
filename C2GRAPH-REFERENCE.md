@@ -6,7 +6,9 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Version scope: this reference describes the C2GRAPH `v1.1.0` Version 1 release, dated **13 August 2026**.
+> Version scope: C2GRAPH `v1.2.0` is the current Version 1 minor release dated **22 August 2026**. It includes
+> BEA v2, ACRP, CEA, Progress Liveness & Bounded Self-Audit, and the 19 August hardening. Historical v1.1.0
+> evidence remains labeled as historical rather than being retroactively rewritten.
 
 > **C2GRAPH** is short for **Convert to Graph Engineering**.
 
@@ -26,9 +28,9 @@ Nothing here needs reading front to back. It is here so you can look one thing u
 - `C2GRAPH_RESUME_CAPSULE v1` is mandatory after PHASE/FASE 3/3.W before PHASE/FASE 4 and may live entirely in transcript/session evidence. `.agent/state/**` is optional durable persistence, not a resume prerequisite.
 - Prompt 97 resumes from the capsule's exact `NEXT_ACTION`; it must not restart PHASE/FASE 0 or re-ask settled PHASE/FASE 3 decisions.
 
-## The 38 invariants
+## The 39 invariants in the current candidate
 
-The list is 38 long and the numbering is contiguous, `CORE-01` to `CORE-38`, which
+The current candidate list is 39 long and contiguous, `CORE-01` to `CORE-39`, which
 `verify/counts.py` checks. The later rules cover untrusted content, secret handling, index placement,
 failure recall, discovery caching, completeness offers, and goal inheritance. Under CORE-19 identifiers are permanent - a
 number is never reused and never renumbered, and a new rule is appended at the end of the range - so
@@ -48,6 +50,7 @@ every cross-reference in the corpus stays valid for the life of the repository:
 | `CORE-36` | CACHE FIRST. Read discovery cache before searching; repeat a cached query only with a named invalidation. |
 | `CORE-37` | COMPLETENESS IS OFFERED, NOT ASSUMED. Census missing tests/contracts/rollbacks and ask before generating them. |
 | `CORE-38` | GOALS ARE INHERITED, NOT RESTARTED. Collect and classify prior goals with lineage; never delete them during adoption. |
+| `CORE-39` | COGNITIVE CONTAINMENT IS NOT WRITE AUTHORITY. Exact failure/lesson recall may be suppressed only by short human-granted CEA; raw evidence remains visible and durable repair stays on normal/BEA write authority. |
 
 
 These live in `AGENTS.md` and are read on every single turn, which is why that file is kept short.
@@ -408,4 +411,40 @@ For the full prevention, containment, PHASE 3 resolution, reporting, and regress
 
 ## Model adapter / cache boundary
 
-Current adapter-integrated v1.1.0 measurements are 199 files, 46 Python scripts, 32 validators/gates, 30 registered checks and 43 routes per edition. Adapter engineering revision is v0.5.5; the C2GRAPH product version remains v1.1.0. Cache hits are non-authoritative. Production capability admission may require live evidence, cache-aware evidence and runtime-contract verification.
+C2GRAPH v1.2.0 measurements are 228 distributed files, 64 Python scripts, 37 validators/gates, 39 registered checks and 45 routes per edition. Adapter engineering revision remains v0.5.5; the published C2GRAPH product version is v1.2.0. Cache hits, ACRP representation choice, and effective model routing are non-authoritative. Production adapter/ACRP admission may require external live evidence and runtime-contract verification.
+
+## C2GRAPH v1.2.0 emergency authority
+
+C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
+assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
+expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
+bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
+`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.
+
+## C2GRAPH v1.2.0 ACRP and CEA
+
+- `C2GRAPH-ACRP-GUIDE.md` / `C2GRAPH-ACRP-GUIDE-ID.md` - adaptive representation after frozen bounded selection.
+- `C2GRAPH-CEA-GUIDE.md` / `C2GRAPH-CEA-GUIDE-ID.md` - exact external containment for poisoned failure/lesson recall.
+- CEA, ACRP, cache, and effective model routing never expand BEA authority.
+
+## Progress liveness and bounded self-audit
+
+C2GRAPH v1.2.0 adds a semantic-progress watchdog without turning activity into completion evidence. It compares accepted progress snapshots, distinguishes valid external waits and declared long-running actions from livelock, and can launch bounded read-only audit lanes. Diagnostic workers are advisory and `canonical_write=false`; the C2GRAPH-specific audit fan-out is capped separately from the existing canonical execution-writer limit. Repository-changing recovery never self-authorizes: normal semantic scope, PHASE 3.W `ACTUAL_WRITE_SET`, rollback basis, immediate freshness, and effect verification remain mandatory. See `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md` and the Indonesian companion.
+
+## Current academic validation snapshot - 19 August 2026
+
+The C2GRAPH v1.2.0 release has 39/39 registered checks with explicit process-isolated PASS verdicts per
+edition. Directed high-risk evidence includes BEA 33/33, CEA 18/18, Bounded Evidence Read 56/56, ACRP 29/29 plus
+1,000 randomized round-trips, full-stack interactions 12/12 plus 5,000 randomized authority-invariance states,
+Progress Liveness 32/32, and embedded adapter admission 30/30 per edition.
+
+The academic re-audit additionally enumerates the declared finite/equivalence domains: 4,194,304 authority states,
+1,572,864 implementation-level progress states per edition, 28,561 strict-numeric combinations per edition, 44,286
+ACRP codec cases per edition, and 752 bounded-read boundary cases per edition. The adapter-registry supplemental
+finite audit covers its declared pattern, endpoint, lifecycle, ordered profile-pair, alias-grammar, and unknown-suffix
+cases. These statements are exhaustive only over the explicitly declared finite domains.
+
+Two 19 August findings are closed: `C2G-PL-20260819-01` (strict numeric-boundary coercion) and
+`C2G-CEA-20260819-02` (CEA CLI-entry alias shadowing). Neither finding produced an observed path that widened
+repository-write authority. See `C2GRAPH-ACADEMIC-VALIDATION-GUIDE.md` for evidence-class definitions.
+

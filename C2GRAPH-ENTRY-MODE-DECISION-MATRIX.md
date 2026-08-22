@@ -6,7 +6,7 @@
 > - Windows PowerShell: `& "<C2GRAPH_SOURCE_ROOT>\scripts\c2python.cmd"`
 > Re-resolve after a CLI/session/host restart; quoting is part of the canonical prefix.
 
-> Release scope: all entry modes in this matrix ship together in the Version 1 release, `v1.1.0`, dated **13 August 2026**.
+> Release scope: all entry modes in this matrix remain part of C2GRAPH `v1.2.0`. They were already present in the historical v1.1.0 release; v1.2.0 keeps their authority semantics while adding the new authority-separation planes.
 
 > Deterministic routing guide for choosing `ADOPT_WITH_GOAL`, `WORKFLOW_ONLY`, or `BOOTSTRAP` before an agent changes a repository.
 
