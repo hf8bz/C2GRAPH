@@ -2,7 +2,7 @@ cff-version: 1.2.0
 
 message: >-
   If you use C2GRAPH, please cite this v1.2.0 software release.
-  For research use, also cite the academic paper listed in preferred-citation.
+  For research use, also cite the current Manuscript Revision 1 paper listed in preferred-citation.
 
 type: software
 
@@ -66,11 +66,11 @@ preferred-citation:
       given-names: "Hafizh"
       affiliation: "PT Arshaka Digital Media Kreasi"
 
-  doi: "10.5281/zenodo.22058066"
-  url: "https://doi.org/10.5281/zenodo.22058066"
+  doi: "10.5281/zenodo.22093405"
+  url: "https://doi.org/10.5281/zenodo.22093405"
 
   year: 2026
-  date-published: "2026-08-22"
+  date-published: "2026-08-25"
   status: preprint
   license: CC-BY-4.0
   languages:

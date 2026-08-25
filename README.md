@@ -8,14 +8,14 @@ C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, 
 
 [![Release](https://img.shields.io/badge/release-v1.2.0-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.22058066-blue)](https://doi.org/10.5281/zenodo.22058066)
+[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.22093405-blue)](https://doi.org/10.5281/zenodo.22093405)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.22058130-blue)](https://doi.org/10.5281/zenodo.22058130)
 [![Source checks](https://img.shields.io/badge/source_checks-39%2F39_EN_%7C_39%2F39_ID-brightgreen)](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0)
 
 **Version 1.2.0 · Current release · 22 August 2026**
 
 [Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v1.2.0) ·
-[Research Paper](https://doi.org/10.5281/zenodo.22058066) ·
+[Research Paper](https://doi.org/10.5281/zenodo.22093405) ·
 [Software Archive](https://doi.org/10.5281/zenodo.22058130) ·
 [Deep Dive](C2GRAPH-DEEP-DIVE.md) ·
 [Start Here](C2GRAPH-DOCS-START-HERE.md) ·
@@ -1169,9 +1169,9 @@ The governance model is intended to sit around the engineering workflow rather t
 
 **C2GRAPH: Compositional Repository Governance for Long-Horizon AI Coding Agents**
 
-The current English and Indonesian manuscripts are publication-dated **22 August 2026 / 22 Agustus 2026**, authored by **Hafizh Albanna**, and archived under the v1.2.0 paper DOI:
+The current English and Indonesian manuscripts are **Manuscript Revision 1**, publication-dated **25 August 2026 / 25 Agustus 2026**, authored by **Hafizh Albanna**, and archived under the current v1.2.0 paper DOI:
 
-**[10.5281/zenodo.22058066](https://doi.org/10.5281/zenodo.22058066)**
+**[10.5281/zenodo.22093405](https://doi.org/10.5281/zenodo.22093405)**
 
 The paper record contains the bilingual current manuscript files and is licensed **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
@@ -1187,8 +1187,9 @@ The software release is version `1.2.0`, released **22 August 2026**, authored b
 
 ### Historical DOI records
 
-Earlier records remain historical provenance for prior C2GRAPH states and are not the canonical identifiers for v1.2.0:
+Earlier records remain historical provenance and are not the current canonical paper/software identifiers for v1.2.0:
 
+* previous v1.2.0 manuscript DOI: **https://doi.org/10.5281/zenodo.22058066**
 * earlier research-paper record: **https://doi.org/10.5281/zenodo.21922284**
 * earlier software archive: **https://doi.org/10.5281/zenodo.21922219**
 
@@ -1198,7 +1199,7 @@ If you use C2GRAPH in research, please use the repository's:
 
 **[CITATION.cff](CITATION.cff)**
 
-The v1.2.0 citation metadata identifies software DOI **10.5281/zenodo.22058130** and uses the paper DOI **10.5281/zenodo.22058066** as the preferred research citation, with version `1.2.0`, release date `2026-08-22`, and author **Hafizh Albanna**.
+The v1.2.0 citation metadata identifies software DOI **10.5281/zenodo.22058130** and uses the current paper DOI **10.5281/zenodo.22093405** as the preferred research citation. The software remains version `1.2.0`, released `2026-08-22`; the current paper is **Manuscript Revision 1**, published `2026-08-25`, authored by **Hafizh Albanna**.
 
 ---
 
