@@ -1,80 +1,67 @@
 # C2GRAPH Documentation — Start Here
 
-> **Identity:** C2GRAPH `v1.2.0` is the current Version 1 minor release dated **22 August 2026**. It adds
-> BEA v2, ACRP, C2GRAPH-native CEA, Progress Liveness & Bounded Self-Audit, strict numeric-boundary hardening,
-> and the repaired CEA CLI entry path. The v1.1.0 release remains immutable historical provenance.
+> C2GRAPH v1.2.0 public documentation router. This page explains where to read next. It does not override executable prompts, `AGENTS.md`, routes, scopes, runbooks, configuration, schemas, or exact runtime state.
 
-> **CLI notation:** `<C2PY>` is documentation notation. Resolve it for the current host/session with
-> `C2GRAPH-CLI-LAUNCHER-GUIDE.md`; do not type `<C2PY>` literally.
+**Bahasa Indonesia:** [C2GRAPH-DOCS-START-HERE-ID.md](C2GRAPH-DOCS-START-HERE-ID.md)
 
-## Choose the smallest document for the task
+## 1. Choose the formal entry mode first
 
-| Need | Open |
-| --- | --- |
-| Install control plane only in an existing repository | `C2GRAPH-WORKFLOW-ONLY-GUIDE.md` + `C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md` |
-| Choose SCAN / WORKFLOW_ONLY / BOOTSTRAP | `C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md` |
-| Resolve Python launcher spelling | `C2GRAPH-CLI-LAUNCHER-GUIDE.md` |
-| Recover from budget/session exhaustion | `C2GRAPH-BUDGET-RESUME-GUIDE.md` |
-| Review actual write set / rollback authority | `C2GRAPH-ACTUAL-WRITE-PLAN-ROLLBACK-GUIDE.md` |
-| Converge blockers without turning false blockers into STOPs | `C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md` |
-| Handle secret exposure safely | `C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md` |
-| Read large/minified/log evidence | `C2GRAPH-BOUNDED-READ-GUIDE.md` |
-| Understand the model-protocol/cache boundary | `C2GRAPH-MODEL-ADAPTER-GUIDE.md` |
-| Understand ACRP | `C2GRAPH-ACRP-GUIDE.md` / `C2GRAPH-ACRP-GUIDE-ID.md` |
-| Contain poisoned failure/lesson recall | `C2GRAPH-CEA-GUIDE.md` / `C2GRAPH-CEA-GUIDE-ID.md` |
-| Diagnose semantic stagnation / bounded self-audit | `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md` / `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-ID.md` |
-| Use bounded emergency write authority | `C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` / `C2GRAPH-EMERGENCY-AUTHORITY-GUIDE-ID.md` |
-| Find an exact rule, gate or threshold | `C2GRAPH-REFERENCE.md` |
-| Understand architecture and design rationale | `C2GRAPH-DEEP-DIVE.md` |
-| Find a shipped file | `C2GRAPH-FILE-MAP.md` |
-| Diagnose a stopped run | `C2GRAPH-TROUBLESHOOTING.md` |
-| Review finite/exhaustive academic validation | `C2GRAPH-ACADEMIC-VALIDATION-GUIDE.md` |
-| Read release overview and limitations | `README.md` |
+Do not use `SCAN` as a fourth mode. `SCAN-AND-ADOPT.prompt.md` is the executable prompt name for the formal `ADOPT_WITH_GOAL` path.
 
-## Model adapter boundary
+| Repository condition | Formal mode | Start with |
+|---|---|---|
+| Existing non-empty repository + real implementation objective | `ADOPT_WITH_GOAL` | `SCAN-AND-ADOPT.prompt.md` + [Entry Mode Matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md) |
+| Existing non-empty repository + C2GRAPH install/repair/upgrade/verification only | `WORKFLOW_ONLY` | `INSTALL-WORKFLOW-ONLY.prompt.md` + [Workflow-Only Guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md) |
+| Empty or new repository | `BOOTSTRAP` | `BOOTSTRAP-NEW-REPO.prompt.md` + [Entry Mode Matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md) |
 
-The v1.2.0 tree retains the host-side runtime-scoped/cache-aware adapter introduced in v1.1.0 without promoting provider
-state into C2GRAPH authority. Cache hits and cached-token telemetry are performance evidence only. Raw provider cache
-keys, prompt prefixes, and private reasoning are not durable C2GRAPH authority. See
-`C2GRAPH-MODEL-ADAPTER-GUIDE.md`.
+For the lifecycle across all three modes, read [Install, Adopt & Bootstrap Guide](C2GRAPH-INSTALL-ADOPT-BOOTSTRAP-GUIDE.md).
 
-## Current measured source shape
+## 2. Choose documentation by question
 
-Per language edition in the C2GRAPH v1.2.0 release: **228 distributed files**, **64 Python scripts**,
-**37 validators/gates**, **39 registered checks**, **45 routing rows**, **40 runbooks including the template**,
-**27 graph-engineering documents**, and contiguous **CORE-01..CORE-39**. EN router is 205 lines; ID router is 204
-lines, both under the 210-line release ceiling.
+- “What is C2GRAPH and why does it exist?” → [README](README.md)
+- “How does the architecture fit together?” → [Deep Dive](C2GRAPH-DEEP-DIVE.md)
+- “What is the exact rule/gate/config/state contract?” → [Reference](C2GRAPH-REFERENCE.md)
+- “What public docs exist?” → [Public Docs Index](C2GRAPH-PUBLIC-DOCS-INDEX.md)
+- “Which capability is documented where?” → [Repository Coverage Matrix](C2GRAPH-REPOSITORY-COVERAGE-MATRIX.md)
+- “Which runbook/prompt/schema/script/control surface owns this?” → the public catalogs in the [Public Docs Index](C2GRAPH-PUBLIC-DOCS-INDEX.md)
+- “How do discovery, graph state, provenance, application lanes, or verification work across subsystems?” → the cross-cutting guides in the Public Docs Index.
 
-The external docs bundle contains **26 Markdown files**. Repository-template counts are measured independently from
-this documentation bundle.
+## 3. Focused operational guides
 
-## Entry-mode short rule
+Use the focused guide when your problem is already localized:
 
-- existing non-empty repository + control-plane maintenance only → `INSTALL-WORKFLOW-ONLY.prompt.md`;
-- existing non-empty repository + adoption ending in a new implementation goal → `SCAN-AND-ADOPT.prompt.md`;
-- empty/new repository → `BOOTSTRAP-NEW-REPO.prompt.md`.
+- bounded/minified/log evidence → `C2GRAPH-BOUNDED-READ-GUIDE.md`;
+- exact writes and rollback → `C2GRAPH-ACTUAL-WRITE-PLAN-ROLLBACK-GUIDE.md`;
+- mutation-free GATE 0 / rollback preconditions → `C2GRAPH-SAFE-GATE0-ROLLBACK-GUIDE.md`;
+- secrets → `C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md`;
+- blockers → `C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md`;
+- context/resource exhaustion → `C2GRAPH-BUDGET-RESUME-GUIDE.md`;
+- model/cache/tool runtime → `C2GRAPH-MODEL-ADAPTER-GUIDE.md`;
+- BEA → `C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md`;
+- ACRP → `C2GRAPH-ACRP-GUIDE.md`;
+- CEA → `C2GRAPH-CEA-GUIDE.md`;
+- progress/liveness → `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md`;
+- CLI launcher notation → `C2GRAPH-CLI-LAUNCHER-GUIDE.md`;
+- stopped/inconsistent run → `C2GRAPH-TROUBLESHOOTING.md`.
 
-Goal count alone does not select the entry mode.
+Every item above has an Indonesian public companion in `C2GRAPH-PUBLIC-DOCS-INDEX-ID.md` after this documentation overlay is merged.
 
-## Authority order
+## 4. Verification and assurance
 
-Executable prompts and repository rules remain authoritative for execution. Operator docs explain them; they do not
-silently override them. When prose numbers disagree with `<C2PY> scripts/verify/counts.py --json`, treat the prose
-as stale and investigate the drift.
+Verification evidence is documented through the engineering verification/assurance surfaces below:
 
-## C2GRAPH v1.2.0 emergency authority
+- `C2GRAPH-SCRIPT-VERIFICATION-CATALOG.md` for verifier/script surfaces;
+- `C2GRAPH-EVIDENCE-PROVENANCE-ASSURANCE-GUIDE.md` for evidence classes, provenance, claim boundaries and compliance mapping;
+- the v1.2.0 Release Notes for the frozen release verification snapshot.
 
-C2GRAPH v1.2.0 adds Bounded Emergency Authorization (BEA). BEA binds a host-mediated human approval
-assertion to the existing canonical PHASE 3.W write plan, rollback evidence, target, run/session, exact actions, and
-expiry. It does not create a second `ACTUAL_WRITE_SET`, does not widen semantic scope, and is not a generic break-glass
-bypass. Host authentication and authoritative incident-state tracking remain outside the repository mechanism. See
-`C2GRAPH-EMERGENCY-AUTHORITY-GUIDE.md` and the Indonesian companion guide.
+Research paper metadata remains in the README/CITATION surface; it is independent from operator documentation.
 
-## C2GRAPH v1.2.0 ACRP and CEA
+## 5. Frozen release inventory versus current public docs
 
-- `C2GRAPH-ACRP-GUIDE.md` / `C2GRAPH-ACRP-GUIDE-ID.md` - adaptive representation after frozen bounded selection.
-- `C2GRAPH-CEA-GUIDE.md` / `C2GRAPH-CEA-GUIDE-ID.md` - exact external containment for poisoned failure/lesson recall.
-- CEA, ACRP, cache, and effective model routing never expand BEA authority.
+`C2GRAPH-FILE-MAP.md` describes the frozen v1.2.0 release inventory. The public repository may receive explanatory documentation after the frozen release. Do not silently rewrite a frozen release count to equal the current public-doc count.
 
-- Progress liveness / self-audit: `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-EN.md` /
-  `C2GRAPH-PROGRESS-LIVENESS-SELF-AUDIT-ID.md`
+Where a public inventory total and its visible path list cannot be reconciled, regenerate from the authoritative release tree/manifest rather than inventing missing paths.
+
+## 6. Authority boundary
+
+Public documentation explains C2GRAPH. It does not manufacture repository-write authority. Effective mutation still depends on the governing source contracts, including semantic scope, exact `ACTUAL_WRITE_SET`, rollback basis, fresh pre-state, and verification.

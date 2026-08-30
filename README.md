@@ -1,5 +1,7 @@
 # C2GRAPH
 
+**Bahasa Indonesia:** [README-ID.md](README-ID.md)
+
 ### Convert to Graph Engineering
 
 **Repository-level governance for long-running AI coding agents.**
@@ -20,6 +22,8 @@ C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, 
 [Deep Dive](C2GRAPH-DEEP-DIVE.md) ·
 [Start Here](C2GRAPH-DOCS-START-HERE.md) ·
 [Reference](C2GRAPH-REFERENCE.md)
+ ·
+[Bahasa Indonesia](README-ID.md)
 
 ---
 
@@ -1049,23 +1053,51 @@ It does not override those executable contracts.
 
 # Documentation
 
-| I need to...                              | Read                                                                              |
-| ----------------------------------------- | --------------------------------------------------------------------------------- |
-| Start from the correct entry mode         | [Entry Mode Decision Matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md)               |
-| Install only the governance/control plane | [Workflow-Only Guide](C2GRAPH-WORKFLOW-ONLY-GUIDE.md)                             |
-| Give an agent a workflow-only instruction | [Workflow-Only Agent Instruction](C2GRAPH-WORKFLOW-ONLY-AGENT-INSTRUCTION.md)     |
-| Understand the architecture               | [Deep Dive](C2GRAPH-DEEP-DIVE.md)                                                 |
-| Find exact rules, gates, or thresholds    | [Reference](C2GRAPH-REFERENCE.md)                                                 |
-| Navigate all documentation                | [Docs Start Here](C2GRAPH-DOCS-START-HERE.md)                                     |
-| Read large/minified/log evidence safely   | [Bounded Read Guide](C2GRAPH-BOUNDED-READ-GUIDE.md)                               |
-| Understand model/cache/tool compatibility | [Model Adapter Guide](C2GRAPH-MODEL-ADAPTER-GUIDE.md)                             |
-| Review exact writes and rollback          | [Actual Write Plan & Rollback Guide](C2GRAPH-ACTUAL-WRITE-PLAN-ROLLBACK-GUIDE.md) |
-| Resolve blockers correctly                | [Blocker Convergence Guide](C2GRAPH-BLOCKER-CONVERGENCE-GUIDE.md)                 |
-| Handle session/resource exhaustion        | [Budget & Resume Guide](C2GRAPH-BUDGET-RESUME-GUIDE.md)                           |
-| Handle secret exposure                    | [Secret Safety Guide](C2GRAPH-SECRET-SAFETY-PHASE3-GUIDE.md)                      |
-| Resolve host Python launcher notation     | [CLI Launcher Guide](C2GRAPH-CLI-LAUNCHER-GUIDE.md)                               |
-| Diagnose a stopped run                    | [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md)                                     |
-| Find a shipped file                       | [File Map](C2GRAPH-FILE-MAP.md)                                                   |
+Public documentation now has a dedicated navigation layer instead of a single flat table.
+
+**Documentation index:** [English](C2GRAPH-PUBLIC-DOCS-INDEX.md) · [Bahasa Indonesia](C2GRAPH-PUBLIC-DOCS-INDEX-ID.md)  
+**README:** English (this file) · [Bahasa Indonesia](README-ID.md)
+
+### Start here
+
+| I need to... | English | Bahasa Indonesia |
+|---|---|---|
+| Navigate the complete public documentation set | [Public Docs Index](C2GRAPH-PUBLIC-DOCS-INDEX.md) | [Indeks Dokumentasi Publik](C2GRAPH-PUBLIC-DOCS-INDEX-ID.md) |
+| Choose the correct entry mode | [Entry Mode Decision Matrix](C2GRAPH-ENTRY-MODE-DECISION-MATRIX.md) | [Matriks Mode Masuk](C2GRAPH-ENTRY-MODE-DECISION-MATRIX-ID.md) |
+| Understand install/adopt/bootstrap flow | [Install, Adopt & Bootstrap Guide](C2GRAPH-INSTALL-ADOPT-BOOTSTRAP-GUIDE.md) | [Panduan Instal, Adopsi & Bootstrap](C2GRAPH-INSTALL-ADOPT-BOOTSTRAP-GUIDE-ID.md) |
+| Understand the architecture | [Deep Dive](C2GRAPH-DEEP-DIVE.md) | [Deep Dive Indonesia](C2GRAPH-DEEP-DIVE-ID.md) |
+| Find exact rules, gates, thresholds and state contracts | [Reference](C2GRAPH-REFERENCE.md) | [Referensi Indonesia](C2GRAPH-REFERENCE-ID.md) |
+| Diagnose a stopped or inconsistent run | [Troubleshooting](C2GRAPH-TROUBLESHOOTING.md) | [Troubleshooting Indonesia](C2GRAPH-TROUBLESHOOTING-ID.md) |
+
+### Architecture and source catalogs
+
+| Area | English | Bahasa Indonesia |
+|---|---|---|
+| Control-plane composition | [Control Plane Catalog](C2GRAPH-CONTROL-PLANE-CATALOG.md) | [Katalog Control Plane](C2GRAPH-CONTROL-PLANE-CATALOG-ID.md) |
+| Configuration | [Configuration Reference](C2GRAPH-CONFIGURATION-REFERENCE.md) | [Referensi Konfigurasi](C2GRAPH-CONFIGURATION-REFERENCE-ID.md) |
+| Runbooks | [Runbook Catalog](C2GRAPH-RUNBOOK-CATALOG.md) | [Katalog Runbook](C2GRAPH-RUNBOOK-CATALOG-ID.md) |
+| Schemas and runtime state | [Schema & State Catalog](C2GRAPH-SCHEMA-STATE-CATALOG.md) | [Katalog Schema & State](C2GRAPH-SCHEMA-STATE-CATALOG-ID.md) |
+| Prompt surfaces | [Prompt Catalog](C2GRAPH-PROMPT-CATALOG.md) | [Katalog Prompt](C2GRAPH-PROMPT-CATALOG-ID.md) |
+| Scripts and verification | [Script & Verification Catalog](C2GRAPH-SCRIPT-VERIFICATION-CATALOG.md) | [Katalog Script & Verification](C2GRAPH-SCRIPT-VERIFICATION-CATALOG-ID.md) |
+| Capability/source documentation ownership | [Repository Coverage Matrix](C2GRAPH-REPOSITORY-COVERAGE-MATRIX.md) | [Matriks Coverage Repository](C2GRAPH-REPOSITORY-COVERAGE-MATRIX-ID.md) |
+| Frozen release path inventory | [File Map](C2GRAPH-FILE-MAP.md) | [File Map Indonesia](C2GRAPH-FILE-MAP-ID.md) |
+
+### Cross-cutting subsystem guides
+
+| Area | English | Bahasa Indonesia |
+|---|---|---|
+| Discovery, indexing, dispatch, reduction | [Agent, Discovery & Orchestration](C2GRAPH-AGENT-DISCOVERY-ORCHESTRATION-GUIDE.md) | [Versi Indonesia](C2GRAPH-AGENT-DISCOVERY-ORCHESTRATION-GUIDE-ID.md) |
+| Application/scope lanes and mobile concerns | [Application Lanes](C2GRAPH-APPLICATION-LANES-GUIDE.md) | [Versi Indonesia](C2GRAPH-APPLICATION-LANES-GUIDE-ID.md) |
+| Work graph, failures, lessons, checkpoints and resume state | [Graph & State Lifecycle](C2GRAPH-GRAPH-STATE-LIFECYCLE-GUIDE.md) | [Versi Indonesia](C2GRAPH-GRAPH-STATE-LIFECYCLE-GUIDE-ID.md) |
+| Evidence, requirements, provenance and assurance | [Evidence, Provenance & Assurance](C2GRAPH-EVIDENCE-PROVENANCE-ASSURANCE-GUIDE.md) | [Versi Indonesia](C2GRAPH-EVIDENCE-PROVENANCE-ASSURANCE-GUIDE-ID.md) |
+
+Existing focused guides remain part of the public documentation surface: Bounded Read, exact write/rollback, safe GATE 0, secrets, blocker convergence, budget/resume, model adapter, BEA, ACRP, CEA, Progress Liveness, CLI launcher, Workflow-Only, and troubleshooting. They are indexed with both language variants in the Public Docs Index.
+
+### Documentation coverage boundary
+
+The public README names **41 major capability families**. The Repository Coverage Matrix maps all 41 to an English and Indonesian public-document owner after this documentation overlay is merged.
+
+That is a **capability-level coverage claim**, not yet a `228/228` per-path claim. Exact source-path completeness remains blocked on reconciliation of the frozen release inventory because the current public File Map reports 40 runbooks while visibly enumerating 36 named Markdown runbook paths, and reports 64 Python scripts without a self-contained obvious 64-path script table. Missing paths must be regenerated from the authoritative release tree/manifest; they must not be guessed.
 
 ---
 
