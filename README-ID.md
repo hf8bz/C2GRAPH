@@ -1,15 +1,16 @@
 # C2GRAPH
 
-> **Rilis v1.3.2 Terminal Reconciliation:** hardening korektif di atas paket v1.3.1.
-> Terminal truth dari execution plane sekarang mengalahkan continuity state yang stale; reaktivasi terminal run yang
-> sama ditolak; successor memerlukan completion terattestasi dan satu claim evidence-bound yang unik global.
-> CORE-40 tetap read-only dan repository-write authority tidak berubah.
+> **v1.3.2 — hardening Terminal Reconciliation dan Workflow Convergence.**
+> C2GRAPH mempertahankan model repository governance dari v1.2.0 sambil membuat completion tetap sticky pada jalur
+> resume, menolak reaktivasi terminal same-run dari continuity state yang stale, dan mewajibkan admission berbasis
+> evidence untuk pekerjaan successor yang benar-benar baru. Kontrol ini tetap read-only terhadap repository-write authority.
 
-**Version:** `v1.3.2`
-**Tanggal rilis:** 3 September 2026
-**Package predecessor:** `v1.3.1` Workflow Convergence Resume Hardening, 1 September 2026
-**Author:** Hafizh Albanna
-**DOI software:** [`10.5281/zenodo.22259056`](https://doi.org/10.5281/zenodo.22259056)
+**Versi:** `v1.3.2`  
+**Tanggal rilis:** 3 September 2026  
+**Rilis publik sebelumnya:** `v1.2.0`, 22 Agustus 2026  
+**Predecessor teknis:** `v1.3.1` Workflow Convergence Resume Hardening, 1 September 2026  
+**Author:** Hafizh Albanna  
+**DOI software:** [`10.5281/zenodo.22259056`](https://doi.org/10.5281/zenodo.22259056)  
 **DOI paper rilis:** [`10.5281/zenodo.22259065`](https://doi.org/10.5281/zenodo.22259065)
 
 Bounded evidence read, bounded scanner ingestion, dan boundary model-adapter runtime-scoped/cache-aware termasuk

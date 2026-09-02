@@ -1,15 +1,16 @@
 # C2GRAPH
 
-> **v1.3.2 Terminal Reconciliation release:** corrective hardening over the v1.3.1 package.
-> Terminal execution truth now outranks stale continuity state, same-run terminal reactivation is rejected, and
-> successor creation requires independently attested completion plus one globally unique, evidence-bound claim.
-> CORE-40 remains read-only and repository-write authority is unchanged.
+> **v1.3.2 — Terminal Reconciliation and Workflow Convergence hardening.**
+> C2GRAPH keeps the repository-governance model of v1.2.0 while making completion sticky across resume paths,
+> rejecting stale same-run terminal reactivation, and requiring evidence-bound admission for genuine successor work.
+> These controls remain read-only with respect to repository-write authority.
 
-**Version:** `v1.3.2`
-**Release date:** 3 September 2026
-**Package predecessor:** `v1.3.1` Workflow Convergence Resume Hardening, 1 September 2026
-**Author:** Hafizh Albanna - [LinkedIn](http://www.linkedin.com/in/hafizh-al-banna-63275410)
-**Software DOI:** [`10.5281/zenodo.22259056`](https://doi.org/10.5281/zenodo.22259056)
+**Version:** `v1.3.2`  
+**Release date:** 3 September 2026  
+**Previous public release:** `v1.2.0`, 22 August 2026  
+**Technical predecessor:** `v1.3.1` Workflow Convergence Resume Hardening, 1 September 2026  
+**Author:** Hafizh Albanna - [LinkedIn](http://www.linkedin.com/in/hafizh-al-banna-63275410)  
+**Software DOI:** [`10.5281/zenodo.22259056`](https://doi.org/10.5281/zenodo.22259056)  
 **Release paper DOI:** [`10.5281/zenodo.22259065`](https://doi.org/10.5281/zenodo.22259065)
 
 Bounded evidence read, bounded scanner ingestion, and the runtime-scoped/cache-aware model-adapter boundary are
