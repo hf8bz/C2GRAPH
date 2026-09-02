@@ -1,50 +1,45 @@
-# Katalog Runbook C2GRAPH
+# Katalog Runbook - v1.3.2
 
-**English:** [C2GRAPH-RUNBOOK-CATALOG.md](C2GRAPH-RUNBOOK-CATALOG.md)
+Jumlah exact: 41 Markdown runbook (termasuk `_TEMPLATE.md`).
 
-> Companion Bahasa Indonesia untuk `C2GRAPH-RUNBOOK-CATALOG.md`. **Status reconciliation:** public File Map melaporkan 40 runbook termasuk template (39 non-template), tetapi path table yang sama secara terlihat hanya menampilkan 36 Markdown runbook bernama. Dokumen ini tidak mengarang empat nama yang tidak terlihat.
-
-## Runbook yang diekspos secara publik pada File Map
-
-| Path | Tujuan ringkas |
-|---|---|
-| `.agent/runbooks/_TEMPLATE.md` | template runbook |
-| `agent-dispatch.md` | bounded delegation |
-| `batch-protocol.md` | batching |
-| `blocker-handling.md` | klasifikasi/continuation blocker |
-| `bounded-read.md` | bounded evidence read |
-| `browser-tooling-recovery.md` | recovery browser/tool integration |
-| `budget-resume.md` | resource/context suspension + resume |
-| `context-compaction.md` | continuity setelah compaction |
-| `coverage-backfill.md` | completeness census/backfill |
-| `db-migration.md` | schema/data migration |
-| `discovery-cache.md` | cross-session discovery cache + invalidation |
-| `edit-tooling.md` | mechanical multi-file editing |
-| `entity-resolution.md` | canonical entity resolution |
-| `evidence-contract.md` | contract untuk claim/finding/verification evidence |
-| `goal-contract.md` | Goal contract |
-| `goal-inheritance.md` | goal inventory/lineage |
-| `graph-discovery.md` | bounded repository/graph discovery |
-| `incident-rollback.md` | production incident rollback |
-| `mobile-build-release.md` | mobile build/release |
-| `mobile-device-qa.md` | mobile device QA |
-| `mobile-store-submission.md` | store submission |
-| `model-adapter.md` | adapter/runtime/cache diagnosis |
-| `monorepo-index-placement.md` | per-application index placement |
-| `plan-to-docs.md` | durable plan documentation |
-| `post-deploy-qa.md` | post-deploy verification |
-| `preflight-recall.md` | pre-action failure recall |
-| `propagation.md` | propagasi koreksi manusia |
-| `ratchet-loop.md` | measurable ratchet loop |
-| `rule-preservation.md` | preservasi rule saat merge/router change |
-| `simplification-ladder.md` | cek sebelum menambah abstraction/dependency |
-| `system-inventory.md` | inventory tool/system untuk claim limits |
-| `test-to-workflow.md` | mapping test ke workflow/claim |
-| `tool-usage-capture.md` | capture tool usage dari real call sites |
-| `ui-audit.md` | UI/visual QA governance |
-| `untrusted-content.md` | handling untrusted content |
-| `workflow-discipline.md` | workflow/rulebook discipline |
-
-## Reconciliation rule
-
-Jangan membuat nama runbook ke-37 sampai ke-40 berdasarkan tebakan. Generate exact catalog dari authoritative source/release tree dan validasi terhadap output `scripts/verify/counts.py --json`.
+1. `.agent/runbooks/_TEMPLATE.md`
+2. `.agent/runbooks/agent-dispatch.md`
+3. `.agent/runbooks/batch-protocol.md`
+4. `.agent/runbooks/blocker-handling.md`
+5. `.agent/runbooks/bounded-read.md`
+6. `.agent/runbooks/browser-tooling-recovery.md`
+7. `.agent/runbooks/budget-resume.md`
+8. `.agent/runbooks/cognitive-emergency-authority.md`
+9. `.agent/runbooks/context-compaction.md`
+10. `.agent/runbooks/context-representation.md`
+11. `.agent/runbooks/coverage-backfill.md`
+12. `.agent/runbooks/db-migration.md`
+13. `.agent/runbooks/discovery-cache.md`
+14. `.agent/runbooks/edit-tooling.md`
+15. `.agent/runbooks/emergency-authority.md`
+16. `.agent/runbooks/entity-resolution.md`
+17. `.agent/runbooks/evidence-contract.md`
+18. `.agent/runbooks/goal-contract.md`
+19. `.agent/runbooks/goal-inheritance.md`
+20. `.agent/runbooks/graph-discovery.md`
+21. `.agent/runbooks/incident-rollback.md`
+22. `.agent/runbooks/mobile-build-release.md`
+23. `.agent/runbooks/mobile-device-qa.md`
+24. `.agent/runbooks/mobile-store-submission.md`
+25. `.agent/runbooks/model-adapter.md`
+26. `.agent/runbooks/monorepo-index-placement.md`
+27. `.agent/runbooks/plan-to-docs.md`
+28. `.agent/runbooks/post-deploy-qa.md`
+29. `.agent/runbooks/preflight-recall.md`
+30. `.agent/runbooks/progress-liveness.md`
+31. `.agent/runbooks/propagation.md`
+32. `.agent/runbooks/ratchet-loop.md`
+33. `.agent/runbooks/rule-preservation.md`
+34. `.agent/runbooks/simplification-ladder.md`
+35. `.agent/runbooks/system-inventory.md`
+36. `.agent/runbooks/test-to-workflow.md`
+37. `.agent/runbooks/tool-usage-capture.md`
+38. `.agent/runbooks/ui-audit.md`
+39. `.agent/runbooks/untrusted-content.md`
+40. `.agent/runbooks/workflow-convergence.md`
+41. `.agent/runbooks/workflow-discipline.md`

@@ -1,43 +1,122 @@
-# Katalog Script dan Verification C2GRAPH
+# Katalog Script dan Verifikasi - v1.3.2
 
-**English:** [C2GRAPH-SCRIPT-VERIFICATION-CATALOG.md](C2GRAPH-SCRIPT-VERIFICATION-CATALOG.md)
+Skrip Python terkirim di `scripts/`: 72. Check terdaftar: 43.
 
-> Public File Map melaporkan 64 Python scripts, 37 validators/gates, dan 39 registered checks. Karena path table yang dipublikasikan belum menjadi self-contained exact 64-script list, katalog ini membedakan path yang terlihat dari measured totals.
+## Python scripts
+- `scripts/adapter/capability.py`
+- `scripts/budget/check.py`
+- `scripts/context/representation.py`
+- `scripts/convergence/watch.py`
+- `scripts/emergency/authority.py`
+- `scripts/emergency/cognitive_authority.py`
+- `scripts/emergency/cognitive_effect.py`
+- `scripts/goal/gate.py`
+- `scripts/graph/validate.py`
+- `scripts/handoff/capsule.py`
+- `scripts/handoff/validate.py`
+- `scripts/install/preflight.py`
+- `scripts/interview/ask.py`
+- `scripts/jsonl/validate.py`
+- `scripts/lessons/decay.py`
+- `scripts/lib/c2common.py`
+- `scripts/lib/c2convergence.py`
+- `scripts/lib/c2emergency.py`
+- `scripts/lib/c2progress.py`
+- `scripts/lib/c2read.py`
+- `scripts/lib/c2representation.py`
+- `scripts/progress/watch.py`
+- `scripts/provenance/export.py`
+- `scripts/read/core.py`
+- `scripts/recall/select.py`
+- `scripts/scan/census.py`
+- `scripts/scan/plan.py`
+- `scripts/scan/redact.py`
+- `scripts/scan/tooling.py`
+- `scripts/selftest/cognitive_emergency.py`
+- `scripts/selftest/context_representation.py`
+- `scripts/selftest/emergency_authority.py`
+- `scripts/selftest/fullstack_interactions.py`
+- `scripts/selftest/model_adapter.py`
+- `scripts/selftest/progress_liveness.py`
+- `scripts/selftest/read.py`
+- `scripts/selftest/run.py`
+- `scripts/selftest/workflow_convergence.py`
+- `scripts/state/lock.py`
+- `scripts/state/migrate.py`
+- `scripts/verify/adapter.py`
+- `scripts/verify/all.py`
+- `scripts/verify/ambiguity.py`
+- `scripts/verify/claims.py`
+- `scripts/verify/cli.py`
+- `scripts/verify/cognitive_emergency.py`
+- `scripts/verify/compliance.py`
+- `scripts/verify/context_representation.py`
+- `scripts/verify/counts.py`
+- `scripts/verify/discipline.py`
+- `scripts/verify/emergency.py`
+- `scripts/verify/enforcement.py`
+- `scripts/verify/excludes.py`
+- `scripts/verify/golden.py`
+- `scripts/verify/hygiene.py`
+- `scripts/verify/index_scope.py`
+- `scripts/verify/links.py`
+- `scripts/verify/paths.py`
+- `scripts/verify/placeholders.py`
+- `scripts/verify/prefix.py`
+- `scripts/verify/preserve.py`
+- `scripts/verify/progress_liveness.py`
+- `scripts/verify/provenance.py`
+- `scripts/verify/read.py`
+- `scripts/verify/recall.py`
+- `scripts/verify/routes.py`
+- `scripts/verify/width.py`
+- `scripts/verify/workflow_convergence.py`
+- `scripts/lib/c2terminal.py`
+- `scripts/handoff/terminal_reconcile.py`
+- `scripts/verify/terminal_reconciliation.py`
+- `scripts/selftest/terminal_reconciliation.py`
 
-## Script family yang terlihat pada File Map
-
-| Family/path | Peran publik |
-|---|---|
-| `scripts/adapter/capability.py` | validate/digest adapter capability document |
-| `scripts/budget/check.py` | resource-epoch classification |
-| `scripts/goal/gate.py` | goal integrity/active-goal gate |
-| `scripts/graph/validate.py` | graph schema/instance validation |
-| `scripts/handoff/capsule.py` | resume capsule validation |
-| `scripts/handoff/validate.py` | handoff/checkpoint/canary validation |
-| `scripts/install/preflight.py` | rollback/write-plan preflight |
-| `scripts/interview/ask.py` | optional question queue |
-| `scripts/jsonl/validate.py` | JSONL validation |
-| `scripts/lessons/decay.py` | lesson age/reconfirmation reporting |
-| `scripts/lib/c2common.py` | shared helpers |
-| `scripts/lib/c2read.py` | bounded-read primitives |
-| `scripts/provenance/export.py` | W3C PROV-O export |
-| `scripts/read/core.py` | canonical bounded text evidence CLI |
-| `scripts/scan/census.py` | existing-repo census |
-| `scripts/scan/plan.py` | new-repo planning census |
-| `scripts/scan/redact.py` | secret-safe structural reader |
-| `scripts/scan/tooling.py` | static tool inventory |
-| `scripts/selftest/*` | subsystem/regression selftests |
-| `scripts/state/*` | state lease/migration |
-| `scripts/verify/*` | aggregate + specialized verification checks |
-
-## Verification principle
-
-- `scripts/verify/all.py` adalah aggregate registered-check runner.
-- `scripts/verify/counts.py --json` adalah authoritative live measurement yang disebut public File Map untuk count snapshot.
-- Published number harus diverifikasi dari source owner dan tidak dipelihara manual secara terpisah.
-- PASS berlaku untuk contract yang diuji; ia bukan universal-correctness proof.
-- Randomized/fuzz/finite-domain result harus diberi boundary domain/harness yang eksplisit.
-
-## Exact-catalog blocker
-
-Jangan menyebut path list ini sebagai “64/64 exact scripts” sebelum tree/manifest menghasilkan exact path set dan count-nya cocok dengan measurement. Missing path tidak boleh ditebak.
+## Registered checks
+1. `verify/counts.py`
+2. `verify/claims.py`
+3. `verify/paths.py`
+4. `verify/index_scope.py`
+5. `verify/links.py`
+6. `verify/excludes.py`
+7. `verify/width.py`
+8. `verify/hygiene.py`
+9. `verify/cli.py`
+10. `verify/provenance.py`
+11. `verify/compliance.py`
+12. `verify/preserve.py`
+13. `verify/placeholders.py` --template
+14. `jsonl/validate.py`
+15. `graph/validate.py`
+16. `handoff/validate.py`
+17. `goal/gate.py`
+18. `lessons/decay.py`
+19. `verify/recall.py`
+20. `verify/read.py`
+21. `verify/discipline.py`
+22. `verify/enforcement.py`
+23. `verify/routes.py`
+24. `verify/prefix.py`
+25. `verify/golden.py`
+26. `verify/ambiguity.py`
+27. `verify/adapter.py`
+28. `verify/emergency.py`
+29. `verify/progress_liveness.py`
+30. `verify/workflow_convergence.py`
+31. `verify/terminal_reconciliation.py`
+32. `verify/context_representation.py`
+33. `verify/cognitive_emergency.py`
+34. `selftest/emergency_authority.py`
+35. `selftest/context_representation.py`
+36. `selftest/fullstack_interactions.py`
+37. `selftest/progress_liveness.py`
+38. `selftest/workflow_convergence.py`
+39. `selftest/terminal_reconciliation.py`
+40. `selftest/cognitive_emergency.py`
+41. `selftest/run.py`
+42. `selftest/read.py`
+43. `selftest/model_adapter.py`

@@ -1,42 +1,245 @@
-# C2GRAPH File Map — Companion Bahasa Indonesia
+# Peta File C2GRAPH - v1.3.2
 
-**English:** [C2GRAPH-FILE-MAP.md](C2GRAPH-FILE-MAP.md)
+Berikut exact 235-path distribution manifest dari source final. Complete source-tree count adalah 244.
 
-> Companion untuk `C2GRAPH-FILE-MAP.md`. Path/filename bersifat language-neutral dan canonical path inventory tetap harus direkonsiliasi terhadap frozen release tree/manifest. Companion ini menjelaskan keluarga path tanpa mengarang path yang belum terlihat.
+- `.agent/cognitive-emergency-authority.schema.md`
+- `.agent/compliance-map.md`
+- `.agent/config.yml`
+- `.agent/context-representation.schema.md`
+- `.agent/core-baseline.md`
+- `.agent/counts.generated.json`
+- `.agent/distribution-files.txt`
+- `.agent/draft/.gitkeep`
+- `.agent/emergency-authority.schema.md`
+- `.agent/failures.jsonl`
+- `.agent/failures.schema.md`
+- `.agent/goals.schema.md`
+- `.agent/goals/.gitkeep`
+- `.agent/graph/.gitkeep`
+- `.agent/graph/schema/edges.md`
+- `.agent/graph/schema/example.jsonl`
+- `.agent/graph/schema/nodes.md`
+- `.agent/handoff.schema.md`
+- `.agent/lessons.jsonl`
+- `.agent/lessons.schema.md`
+- `.agent/model-adapter.schema.md`
+- `.agent/prefix.lock`
+- `.agent/progress.schema.md`
+- `.agent/provenance.schema.md`
+- `.agent/requirements.schema.md`
+- `.agent/resume-capsule.schema.md`
+- `.agent/routes.yaml`
+- `.agent/rule-registry.md`
+- `.agent/runbooks/_TEMPLATE.md`
+- `.agent/runbooks/agent-dispatch.md`
+- `.agent/runbooks/batch-protocol.md`
+- `.agent/runbooks/blocker-handling.md`
+- `.agent/runbooks/bounded-read.md`
+- `.agent/runbooks/browser-tooling-recovery.md`
+- `.agent/runbooks/budget-resume.md`
+- `.agent/runbooks/cognitive-emergency-authority.md`
+- `.agent/runbooks/context-compaction.md`
+- `.agent/runbooks/context-representation.md`
+- `.agent/runbooks/coverage-backfill.md`
+- `.agent/runbooks/db-migration.md`
+- `.agent/runbooks/discovery-cache.md`
+- `.agent/runbooks/edit-tooling.md`
+- `.agent/runbooks/emergency-authority.md`
+- `.agent/runbooks/entity-resolution.md`
+- `.agent/runbooks/evidence-contract.md`
+- `.agent/runbooks/generated/.gitkeep`
+- `.agent/runbooks/goal-contract.md`
+- `.agent/runbooks/goal-inheritance.md`
+- `.agent/runbooks/graph-discovery.md`
+- `.agent/runbooks/incident-rollback.md`
+- `.agent/runbooks/mobile-build-release.md`
+- `.agent/runbooks/mobile-device-qa.md`
+- `.agent/runbooks/mobile-store-submission.md`
+- `.agent/runbooks/model-adapter.md`
+- `.agent/runbooks/monorepo-index-placement.md`
+- `.agent/runbooks/plan-to-docs.md`
+- `.agent/runbooks/post-deploy-qa.md`
+- `.agent/runbooks/preflight-recall.md`
+- `.agent/runbooks/progress-liveness.md`
+- `.agent/runbooks/propagation.md`
+- `.agent/runbooks/ratchet-loop.md`
+- `.agent/runbooks/rule-preservation.md`
+- `.agent/runbooks/simplification-ladder.md`
+- `.agent/runbooks/system-inventory.md`
+- `.agent/runbooks/test-to-workflow.md`
+- `.agent/runbooks/tool-usage-capture.md`
+- `.agent/runbooks/ui-audit.md`
+- `.agent/runbooks/untrusted-content.md`
+- `.agent/runbooks/workflow-convergence.md`
+- `.agent/runbooks/workflow-discipline.md`
+- `.agent/runs.schema.md`
+- `.agent/runs/.gitkeep`
+- `.agent/runtime-artifacts.txt`
+- `.agent/schemas/workflow-convergence.schema.md`
+- `.agent/scopes/_TEMPLATE.md`
+- `.agent/scopes/backend-api.md`
+- `.agent/scopes/data-schema.md`
+- `.agent/scopes/frontend-web.md`
+- `.agent/scopes/infra-deploy.md`
+- `.agent/scopes/mobile-android.md`
+- `.agent/scopes/mobile-ios.md`
+- `.agent/scopes/mobile-native.md`
+- `.agent/scopes/payments-sensitive.md`
+- `.agent/scopes/qa-tooling.md`
+- `.agent/scopes/ui-ux.md`
+- `.agent/state/.gitkeep`
+- `.agent/toolmap.schema.md`
+- `.gitattributes`
+- `AGENTS.md`
+- `BOOTSTRAP-NEW-REPO.prompt.md`
+- `CHANGELOG.md`
+- `CHECKLIST.md`
+- `CODEOWNERS`
+- `CONTRIBUTING.md`
+- `INSTALL-WORKFLOW-ONLY.prompt.md`
+- `LICENSE`
+- `PLACEHOLDERS.md`
+- `README.md`
+- `SCAN-AND-ADOPT.prompt.md`
+- `SECURITY.md`
+- `START-HERE.md`
+- `adapters/c2modeladapter/CHANGELOG.md`
+- `adapters/c2modeladapter/MODEL-COVERAGE.md`
+- `adapters/c2modeladapter/README.md`
+- `adapters/c2modeladapter/c2modeladapter/__init__.py`
+- `adapters/c2modeladapter/c2modeladapter/base.py`
+- `adapters/c2modeladapter/c2modeladapter/cache.py`
+- `adapters/c2modeladapter/c2modeladapter/errors.py`
+- `adapters/c2modeladapter/c2modeladapter/factory.py`
+- `adapters/c2modeladapter/c2modeladapter/open_weight.py`
+- `adapters/c2modeladapter/c2modeladapter/probe.py`
+- `adapters/c2modeladapter/c2modeladapter/providers.py`
+- `adapters/c2modeladapter/c2modeladapter/registry.py`
+- `adapters/c2modeladapter/c2modeladapter/request_policy.py`
+- `adapters/c2modeladapter/c2modeladapter/structured.py`
+- `adapters/c2modeladapter/c2modeladapter/types.py`
+- `adapters/c2modeladapter/c2modeladapter/validation.py`
+- `adapters/c2modeladapter/pyproject.toml`
+- `adapters/c2modeladapter/tests/test_adapter.py`
+- `docs/HOST-COMPATIBILITY.md`
+- `docs/graph-engineering/00-audit.md`
+- `docs/graph-engineering/01-measurable-loop.md`
+- `docs/graph-engineering/02-lessons.md`
+- `docs/graph-engineering/03-graph-plane.md`
+- `docs/graph-engineering/04-context-budget.md`
+- `docs/graph-engineering/05-retrieval-eval.md`
+- `docs/graph-engineering/06-operations.md`
+- `docs/graph-engineering/07-system-inventory.md`
+- `docs/graph-engineering/08-repo-scan.md`
+- `docs/graph-engineering/09-plan-scan.md`
+- `docs/graph-engineering/10-architecture-selection.md`
+- `docs/graph-engineering/11-complexity-budget.md`
+- `docs/graph-engineering/12-compaction-handoff.md`
+- `docs/graph-engineering/13-goal-contract.md`
+- `docs/graph-engineering/14-tool-usage-map.md`
+- `docs/graph-engineering/15-test-workflow-map.md`
+- `docs/graph-engineering/16-mobile-platform.md`
+- `docs/graph-engineering/17-workflow-discipline.md`
+- `docs/graph-engineering/18-scan-automation.md`
+- `docs/graph-engineering/19-bounded-read.md`
+- `docs/graph-engineering/20-model-adapter.md`
+- `docs/graph-engineering/22-context-representation-planner.md`
+- `docs/graph-engineering/23-cognitive-emergency-containment.md`
+- `docs/graph-engineering/24-progress-liveness-self-audit.md`
+- `docs/graph-engineering/25-workflow-convergence.md`
+- `docs/graph-engineering/_decisions.md`
+- `docs/graph-engineering/_ledger.jsonl`
+- `docs/graph-engineering/model-adapter-provider-contracts.md`
+- `docs/graph-engineering/references.md`
+- `docs/guides/.gitkeep`
+- `eval/retrieval/golden.example.jsonl`
+- `eval/rubrics/_TEMPLATE.md`
+- `prompts/00-baseline-audit.prompt.md`
+- `prompts/01-measurable-loop.prompt.md`
+- `prompts/02-lessons-corpus.prompt.md`
+- `prompts/03-graph-plane.prompt.md`
+- `prompts/04-context-split.prompt.md`
+- `prompts/05-retrieval-eval.prompt.md`
+- `prompts/06-operations.prompt.md`
+- `prompts/07-compaction-drill.prompt.md`
+- `prompts/08-goal-emit.prompt.md`
+- `prompts/97-budget-resume.prompt.md`
+- `prompts/98-compaction-handoff.prompt.md`
+- `prompts/99-session-resume.prompt.md`
+- `scripts/README.md`
+- `scripts/adapter/capability.py`
+- `scripts/budget/check.py`
+- `scripts/c2python.cmd`
+- `scripts/c2python.sh`
+- `scripts/context/representation.py`
+- `scripts/convergence/watch.py`
+- `scripts/emergency/authority.py`
+- `scripts/emergency/cognitive_authority.py`
+- `scripts/emergency/cognitive_effect.py`
+- `scripts/goal/gate.py`
+- `scripts/graph/validate.py`
+- `scripts/handoff/capsule.py`
+- `scripts/handoff/validate.py`
+- `scripts/install/preflight.py`
+- `scripts/interview/ask.py`
+- `scripts/jsonl/validate.py`
+- `scripts/lessons/decay.py`
+- `scripts/lib/c2common.py`
+- `scripts/lib/c2convergence.py`
+- `scripts/lib/c2emergency.py`
+- `scripts/lib/c2progress.py`
+- `scripts/lib/c2read.py`
+- `scripts/lib/c2representation.py`
+- `scripts/progress/watch.py`
+- `scripts/provenance/export.py`
+- `scripts/read/core.py`
+- `scripts/recall/select.py`
+- `scripts/scan/census.py`
+- `scripts/scan/plan.py`
+- `scripts/scan/redact.py`
+- `scripts/scan/tooling.py`
+- `scripts/selftest/cognitive_emergency.py`
+- `scripts/selftest/context_representation.py`
+- `scripts/selftest/emergency_authority.py`
+- `scripts/selftest/fullstack_interactions.py`
+- `scripts/selftest/model_adapter.py`
+- `scripts/selftest/progress_liveness.py`
+- `scripts/selftest/read.py`
+- `scripts/selftest/run.py`
+- `scripts/selftest/workflow_convergence.py`
+- `scripts/state/lock.py`
+- `scripts/state/migrate.py`
+- `scripts/verify/adapter.py`
+- `scripts/verify/all.py`
+- `scripts/verify/ambiguity.py`
+- `scripts/verify/claims.py`
+- `scripts/verify/cli.py`
+- `scripts/verify/cognitive_emergency.py`
+- `scripts/verify/compliance.py`
+- `scripts/verify/context_representation.py`
+- `scripts/verify/counts.py`
+- `scripts/verify/discipline.py`
+- `scripts/verify/emergency.py`
+- `scripts/verify/enforcement.py`
+- `scripts/verify/excludes.py`
+- `scripts/verify/golden.py`
+- `scripts/verify/hygiene.py`
+- `scripts/verify/index_scope.py`
+- `scripts/verify/links.py`
+- `scripts/verify/paths.py`
+- `scripts/verify/placeholders.py`
+- `scripts/verify/prefix.py`
+- `scripts/verify/preserve.py`
+- `scripts/verify/progress_liveness.py`
+- `scripts/verify/provenance.py`
+- `scripts/verify/read.py`
+- `scripts/verify/recall.py`
+- `scripts/verify/routes.py`
+- `scripts/verify/width.py`
+- `scripts/verify/workflow_convergence.py`
+## Surface terminal reconciliation v1.3.2
 
-## Frozen v1.2.0 inventory snapshot yang dipublikasikan
-
-Public File Map melaporkan:
-
-- 228 distributed files per EN/ID edition;
-- 64 Python scripts;
-- 37 validators/gates;
-- 39 registered checks;
-- 45 routing rows;
-- 40 runbooks termasuk template / 39 non-template;
-- 27 graph-engineering docs;
-- CORE-01 sampai CORE-39 contiguous.
-
-Authoritative live count disebut berasal dari `scripts/verify/counts.py --json`.
-
-## Major path families
-
-- root prompts/rules/release files;
-- `.agent/config.yml`, routes, baselines, rule registry, distribution manifest, counts;
-- Goal/requirement/failure/lesson/provenance/handoff schemas dan state;
-- graph schema + graph-engineering docs;
-- scope files untuk backend/data/frontend/infra/mobile/payments/QA/UI;
-- runbooks;
-- root/staged/resume prompts;
-- Python scripts untuk scan/read/state/goal/graph/handoff/provenance/adapter/selftest/verify;
-- adapter package/modules.
-
-## Important reconciliation issue
-
-Tabel public File Map yang terlihat menyebut 36 Markdown runbook bernama, sedangkan snapshot count mengatakan 40 termasuk template. Ini **bukan bukti otomatis bahwa release archive salah**; ini berarti public inventory belum self-reconciling. Empat nama tidak boleh diciptakan berdasarkan asumsi.
-
-Hal yang sama berlaku untuk 64 Python scripts: exact path list harus dihasilkan dari authoritative release tree/manifest.
-
-## Frozen bundle versus current public docs
-
-Count dokumentasi pada frozen v1.2.0 release tidak boleh diubah hanya karena public repository menerima explanatory docs tambahan setelah release. Historical release identity harus dipertahankan; current docs inventory dicatat terpisah.
+- `scripts/lib/c2terminal.py` - terminal truth lintas-plane dan validasi claim successor.
+- `scripts/handoff/terminal_reconcile.py` - gate CLI resume/successor yang terpisah.
+- `scripts/verify/terminal_reconciliation.py` - kontrak integrasi statis.
+- `scripts/selftest/terminal_reconciliation.py` - test directed, finite-matrix, dan mutation deterministik.

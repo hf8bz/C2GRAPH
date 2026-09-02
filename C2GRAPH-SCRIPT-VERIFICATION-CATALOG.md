@@ -1,91 +1,122 @@
-# C2GRAPH Script and Verification Catalog
+# Script and Verification Catalog - v1.3.2
 
-**Bahasa Indonesia:** [C2GRAPH-SCRIPT-VERIFICATION-CATALOG-ID.md](C2GRAPH-SCRIPT-VERIFICATION-CATALOG-ID.md)
+Shipped Python scripts under `scripts/`: 72. Registered checks: 43.
 
-> C2GRAPH v1.2.0 public catalog. The public File Map reports 64 Python scripts, 37 validators/gates, and 39 registered checks. The path table currently exposed by that File Map does not itself enumerate an obvious complete 64-Python-script set, so this document separates **publicly enumerated paths** from **measured totals**.
+## Python scripts
+- `scripts/adapter/capability.py`
+- `scripts/budget/check.py`
+- `scripts/context/representation.py`
+- `scripts/convergence/watch.py`
+- `scripts/emergency/authority.py`
+- `scripts/emergency/cognitive_authority.py`
+- `scripts/emergency/cognitive_effect.py`
+- `scripts/goal/gate.py`
+- `scripts/graph/validate.py`
+- `scripts/handoff/capsule.py`
+- `scripts/handoff/validate.py`
+- `scripts/install/preflight.py`
+- `scripts/interview/ask.py`
+- `scripts/jsonl/validate.py`
+- `scripts/lessons/decay.py`
+- `scripts/lib/c2common.py`
+- `scripts/lib/c2convergence.py`
+- `scripts/lib/c2emergency.py`
+- `scripts/lib/c2progress.py`
+- `scripts/lib/c2read.py`
+- `scripts/lib/c2representation.py`
+- `scripts/progress/watch.py`
+- `scripts/provenance/export.py`
+- `scripts/read/core.py`
+- `scripts/recall/select.py`
+- `scripts/scan/census.py`
+- `scripts/scan/plan.py`
+- `scripts/scan/redact.py`
+- `scripts/scan/tooling.py`
+- `scripts/selftest/cognitive_emergency.py`
+- `scripts/selftest/context_representation.py`
+- `scripts/selftest/emergency_authority.py`
+- `scripts/selftest/fullstack_interactions.py`
+- `scripts/selftest/model_adapter.py`
+- `scripts/selftest/progress_liveness.py`
+- `scripts/selftest/read.py`
+- `scripts/selftest/run.py`
+- `scripts/selftest/workflow_convergence.py`
+- `scripts/state/lock.py`
+- `scripts/state/migrate.py`
+- `scripts/verify/adapter.py`
+- `scripts/verify/all.py`
+- `scripts/verify/ambiguity.py`
+- `scripts/verify/claims.py`
+- `scripts/verify/cli.py`
+- `scripts/verify/cognitive_emergency.py`
+- `scripts/verify/compliance.py`
+- `scripts/verify/context_representation.py`
+- `scripts/verify/counts.py`
+- `scripts/verify/discipline.py`
+- `scripts/verify/emergency.py`
+- `scripts/verify/enforcement.py`
+- `scripts/verify/excludes.py`
+- `scripts/verify/golden.py`
+- `scripts/verify/hygiene.py`
+- `scripts/verify/index_scope.py`
+- `scripts/verify/links.py`
+- `scripts/verify/paths.py`
+- `scripts/verify/placeholders.py`
+- `scripts/verify/prefix.py`
+- `scripts/verify/preserve.py`
+- `scripts/verify/progress_liveness.py`
+- `scripts/verify/provenance.py`
+- `scripts/verify/read.py`
+- `scripts/verify/recall.py`
+- `scripts/verify/routes.py`
+- `scripts/verify/width.py`
+- `scripts/verify/workflow_convergence.py`
+- `scripts/lib/c2terminal.py`
+- `scripts/handoff/terminal_reconcile.py`
+- `scripts/verify/terminal_reconciliation.py`
+- `scripts/selftest/terminal_reconciliation.py`
 
-## Publicly enumerated `scripts/**` Python paths
-
-| Path | Publicly described role |
-| --- | --- |
-| `scripts/adapter/capability.py` | adapter capability-document validator/digest |
-| `scripts/budget/check.py` | resource-epoch classifier |
-| `scripts/goal/gate.py` | goal integrity/active-goal gate |
-| `scripts/graph/validate.py` | graph schema/instance validation |
-| `scripts/handoff/capsule.py` | resume capsule validator |
-| `scripts/handoff/validate.py` | handoff schema/checkpoint/canary validation |
-| `scripts/install/preflight.py` | rollback/write-plan preflight |
-| `scripts/interview/ask.py` | optional question queue renderer/collector |
-| `scripts/jsonl/validate.py` | JSONL validation |
-| `scripts/lessons/decay.py` | lesson reconfirmation/age reporting |
-| `scripts/lib/c2common.py` | shared repo/config/count helpers |
-| `scripts/lib/c2read.py` | bounded-read primitives |
-| `scripts/provenance/export.py` | PROV-O export |
-| `scripts/read/core.py` | canonical bounded text evidence CLI |
-| `scripts/scan/census.py` | existing-repo census |
-| `scripts/scan/plan.py` | new-repo planning census |
-| `scripts/scan/redact.py` | secret-safe structural reader |
-| `scripts/scan/tooling.py` | static tool inventory |
-| `scripts/selftest/model_adapter.py` | adapter admission selftest |
-| `scripts/selftest/read.py` | bounded-read adversarial selftest |
-| `scripts/selftest/run.py` | aggregate populated/regression selftest |
-| `scripts/state/lock.py` | TTL state lease |
-| `scripts/state/migrate.py` | state schema migration |
-| `scripts/verify/adapter.py` | adapter cross-surface verification |
-| `scripts/verify/all.py` | aggregate registered-check runner |
-| `scripts/verify/ambiguity.py` | normative wording ambiguity check |
-| `scripts/verify/claims.py` | published-claim/count checks |
-| `scripts/verify/cli.py` | documented CLI flag checks |
-| `scripts/verify/compliance.py` | compliance-map validation |
-| `scripts/verify/counts.py` | authoritative source measurement |
-| `scripts/verify/discipline.py` | workflow/entry/goal/blocker checks |
-| `scripts/verify/enforcement.py` | CORE enforcement ratchet |
-| `scripts/verify/excludes.py` | exclude/carveout consistency |
-| `scripts/verify/golden.py` | retrieval golden-set validation |
-| `scripts/verify/hygiene.py` | text/file hygiene |
-| `scripts/verify/index_scope.py` | index placement validation |
-| `scripts/verify/links.py` | relative Markdown links |
-| `scripts/verify/paths.py` | literal path/runtime-artifact checks |
-| `scripts/verify/placeholders.py` | unresolved placeholder checks |
-| `scripts/verify/prefix.py` | router prefix-lock validation |
-| `scripts/verify/preserve.py` | baseline/registry/router preservation |
-| `scripts/verify/provenance.py` | decision ledger/digest validation |
-| `scripts/verify/read.py` | cross-surface read contract |
-| `scripts/verify/recall.py` | failure-memory recall validation |
-| `scripts/verify/routes.py` | route table/target checks |
-| `scripts/verify/width.py` | router/prose width fence |
-
-The File Map also lists host launcher scripts `scripts/c2python.sh` and `scripts/c2python.cmd`; these are not Python source files.
-
-## Adapter Python surfaces
-
-The File Map separately enumerates Python modules under `adapters/c2modeladapter/**`, including the package implementation, simulation harness, and tests. Those contribute to the broader Python-source tree but should not be conflated with `scripts/**` without using the exact counting rule implemented by `scripts/verify/counts.py`.
-
-## Published measured totals
-
-- Python scripts: **64**
-- validators/gates: **37**
-- registered checks: **39**
-- routes: **45**
-
-The source command `scripts/verify/counts.py --json` is the authoritative measurement owner.
-
-## Verification topology
-
-A reader should distinguish:
-
-1. **leaf validators** — validate one contract or surface;
-2. **selftests** — adversarial/regression collections for a subsystem;
-3. **aggregate verifier** — invokes the registered release checks;
-4. **simulation/fuzz harnesses** — exercise declared state/case spaces;
-5. **package/upgrade verification** — path/hash/baseline integrity;
-6. **external/live checks** — provider/production evidence, not implied by repository-local PASS.
-
-## Reconciliation requirement
-
-Before this file is advertised as an exhaustive 64-row Python catalog, generate its path set from the release tree using the same inclusion semantics as `counts.py`. CI should verify both:
-
-- exact path-set equality between source Python paths and catalog rows;
-- exact numeric equality between generated counts and published count claims.
-
-Never fill missing rows by copying C2Cognitive's 95-script catalog or by inferring filenames from feature names.
+## Registered checks
+1. `verify/counts.py`
+2. `verify/claims.py`
+3. `verify/paths.py`
+4. `verify/index_scope.py`
+5. `verify/links.py`
+6. `verify/excludes.py`
+7. `verify/width.py`
+8. `verify/hygiene.py`
+9. `verify/cli.py`
+10. `verify/provenance.py`
+11. `verify/compliance.py`
+12. `verify/preserve.py`
+13. `verify/placeholders.py` --template
+14. `jsonl/validate.py`
+15. `graph/validate.py`
+16. `handoff/validate.py`
+17. `goal/gate.py`
+18. `lessons/decay.py`
+19. `verify/recall.py`
+20. `verify/read.py`
+21. `verify/discipline.py`
+22. `verify/enforcement.py`
+23. `verify/routes.py`
+24. `verify/prefix.py`
+25. `verify/golden.py`
+26. `verify/ambiguity.py`
+27. `verify/adapter.py`
+28. `verify/emergency.py`
+29. `verify/progress_liveness.py`
+30. `verify/workflow_convergence.py`
+31. `verify/terminal_reconciliation.py`
+32. `verify/context_representation.py`
+33. `verify/cognitive_emergency.py`
+34. `selftest/emergency_authority.py`
+35. `selftest/context_representation.py`
+36. `selftest/fullstack_interactions.py`
+37. `selftest/progress_liveness.py`
+38. `selftest/workflow_convergence.py`
+39. `selftest/terminal_reconciliation.py`
+40. `selftest/cognitive_emergency.py`
+41. `selftest/run.py`
+42. `selftest/read.py`
+43. `selftest/model_adapter.py`
