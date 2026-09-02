@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 
 message: >-
-  If you use C2GRAPH, please cite this v1.2.0 software release.
-  For research use, also cite the current Manuscript Revision 1 paper listed in preferred-citation.
+  If you use C2GRAPH, please cite this v1.3.2 software release.
+  For research use, also cite the v1.3.2 release paper listed in preferred-citation.
 
 type: software
 
 title: "C2GRAPH: Convert to Graph Engineering"
 
-version: "1.2.0"
+version: "1.3.2"
 
-date-released: "2026-08-22"
+date-released: "2026-09-03"
 
-doi: "10.5281/zenodo.22058130"
+doi: "10.5281/zenodo.22259056"
 
 authors:
   - family-names: "Albanna"
@@ -20,23 +20,22 @@ authors:
     affiliation: "PT Arshaka Digital Media Kreasi"
 
 repository-code: "https://github.com/hf8bz/C2GRAPH"
-repository: "https://doi.org/10.5281/zenodo.22058130"
+repository: "https://doi.org/10.5281/zenodo.22259056"
 url: "https://github.com/hf8bz/C2GRAPH"
 
 license: MIT
 
 abstract: >-
   C2GRAPH (Convert to Graph Engineering) is a repository-level governance
-  package for long-running AI coding agents. It moves selected execution
-  state out of transient conversation history and into explicit repository
-  contracts so that objectives, evidence, semantic scope, exact write
-  authority, rollback and freshness, continuity, provenance, model/runtime
-  adaptation, and verification can be inspected independently. Version 1.2.0
-  adds Bounded Emergency Authorization v2, Adaptive Context Representation
-  Planning, C2GRAPH-native Cognitive Emergency Authorization, Progress
-  Liveness & Bounded Self-Audit, stricter runtime-state validation, handoff
-  telemetry hardening, and authority non-interference while preserving the
-  canonical mutation contract.
+  package for long-running AI coding agents. It externalizes selected objective,
+  evidence, provenance, continuity, mutation-authority, rollback/freshness,
+  routing, and verification state into inspectable repository contracts.
+  Version 1.3.2 extends the v1.2.0 public baseline with Workflow Convergence,
+  sticky completion, durable-state-first resume revalidation, cross-plane
+  terminal reconciliation, evidence-bound successor admission, globally
+  consumable semantic claim identity, path/symlink hardening, and pre-append
+  lock/fence revalidation while preserving the canonical repository mutation
+  authority boundary and C2ModelAdapter v0.5.5.
 
 keywords:
   - "C2GRAPH"
@@ -50,27 +49,28 @@ keywords:
   - "Authority non-interference"
   - "Adaptive context representation"
   - "Progress liveness"
-  - "Self-audit"
+  - "Workflow convergence"
+  - "Terminal reconciliation"
+  - "Successor admission"
   - "Provenance"
   - "Reproducibility"
   - "Verification"
-  - "Context management"
 
 preferred-citation:
   type: article
 
-  title: "C2GRAPH: Compositional Repository Governance for Long-Horizon AI Coding Agents"
+  title: "C2GRAPH: Repository-Native Governance for Long-Horizon AI Coding Agents"
 
   authors:
     - family-names: "Albanna"
       given-names: "Hafizh"
       affiliation: "PT Arshaka Digital Media Kreasi"
 
-  doi: "10.5281/zenodo.22093405"
-  url: "https://doi.org/10.5281/zenodo.22093405"
+  doi: "10.5281/zenodo.22259065"
+  url: "https://doi.org/10.5281/zenodo.22259065"
 
   year: 2026
-  date-published: "2026-08-25"
+  date-published: "2026-09-03"
   status: preprint
   license: CC-BY-4.0
   languages:
