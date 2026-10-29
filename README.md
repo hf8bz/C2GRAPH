@@ -8,24 +8,25 @@
 
 C2GRAPH makes agent-driven software work more **bounded, measurable, traceable, resumable, reversible, and auditable** by moving critical execution state out of transient conversation history and into explicit repository contracts.
 
-[![Release](https://img.shields.io/badge/release-v1.3.2-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
+[![Release candidate](https://img.shields.io/badge/candidate-v1.4.19-lightgrey)](https://github.com/hf8bz/C2GRAPH)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.22259065-blue)](https://doi.org/10.5281/zenodo.22259065)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.22259056-blue)](https://doi.org/10.5281/zenodo.22259056)
-[![Source checks](https://img.shields.io/badge/source_checks-43%2F43_EN_%7C_43%2F43_ID-brightgreen)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
+[![Historical source checks v1.3.2](https://img.shields.io/badge/historical_checks-v1.3.2-lightgrey)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
 
-**Version 1.3.2 · Public release · 3 September 2026**
+**Version 1.4.19 · Publication candidate · 29 October 2026**
 
-**Previous public release:** v1.2.0 · 22 August 2026  
-**Technical predecessor:** v1.3.1 · 1 September 2026
+**Previous public release:** v1.3.2 · 2 September 2026  
+**Stable source baseline:** v1.4.19 · 14 October 2026
 
-[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2) ·
-[Release Paper](https://doi.org/10.5281/zenodo.22259065) ·
-[Software Archive](https://doi.org/10.5281/zenodo.22259056) ·
+[Previous public release](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2) ·
+[Previous public paper](https://doi.org/10.5281/zenodo.22259065) ·
+[Previous software archive](https://doi.org/10.5281/zenodo.22259056) ·
 [Docs Index](C2GRAPH-PUBLIC-DOCS-INDEX.md) ·
-[Release Overview](C2GRAPH-V1.3.2-RELEASE-OVERVIEW.md) ·
+[Previous Release Overview](C2GRAPH-V1.3.2-RELEASE-OVERVIEW.md) ·
 [Terminal Reconciliation](C2GRAPH-TERMINAL-RECONCILIATION-GUIDE.md) ·
-[Bahasa Indonesia](README-ID.md)
+[Bahasa Indonesia](README-ID.md) ·
+[New Feature Guides](C2GRAPH-V1.4.19-FEATURE-GUIDES.md)
 
 ---
 
@@ -141,7 +142,23 @@ Provider-specific model behavior, tool-call formats, reasoning state, and cache 
 
 ---
 
-# What changed from v1.2.0 to v1.3.2
+# What changed from v1.3.2 to v1.4.19
+
+This section describes the frozen local **v1.4.19** source. The previous public v1.3.2 technical narrative and DOI records remain historical. This candidate has not been published to GitHub or assigned a new DOI.
+
+- **Application assurance:** subject-bound scenarios, roles, state transitions, negative tests and explicit test-to-workflow obligations.
+- **Universal domain capabilities:** optional capability/domain discovery, accounting invariants and time-aware business behavior remain project-evidence-bound.
+- **Resource safety:** bounded fixtures, read/output/process budgets, owned temporary paths and safer snapshot/restore procedures.
+- **Security QA:** scoped access-control checks, role/tenant separation and controlled active testing runbooks.
+- **Resume and automation:** more explicit hooks, terminal continuation, release audit orchestration and non-destructive export boundaries.
+
+Start with the [feature guide index](C2GRAPH-V1.4.19-FEATURE-GUIDES.md); use the exact canonical files it cites for operations. The guide package contains no audit reports or test evidence.
+
+**Archive note:** The Paper DOI and Software DOI badges above still identify the **v1.3.2 publications**. They are *not* DOI claims for v1.4.19.
+
+---
+
+# Historical: what changed from v1.2.0 to v1.3.2
 
 v1.3.2 is a backward-compatible Version 1 governance and corrective-hardening release over the previous public release, v1.2.0. It preserves the canonical mutation predicate: exact semantic scope, `ACTUAL_WRITE_SET`, rollback readiness, fresh pre-state, and effect-time validation remain the basis for repository mutation.
 
@@ -220,6 +237,74 @@ The following v1.2.0 additions remain part of v1.3.2:
 * **Authority non-interference** — routing/cache state, ACRP, CEA, incident severity, liveness, convergence, and terminal reconciliation may influence strategy or admission, but do not widen the canonical exact-write set.
 
 ---
+
+
+## What changes in the existing workflow
+
+The new distribution remains an extension of the existing three-layer model. It does **not** replace the active Goal, CORE rules, canonical `ACTUAL_WRITE_SET`, rollback, or terminal reconciliation.
+
+### Before vs. current conditional route
+
+```text
+Before: Goal -> scoped runbooks -> exact write plan -> authorized effect -> verification -> terminal/handoff
+Now:    Goal -> optional capability selector -> selected runbooks -> existing exact write plan
+        -> authorized effect -> existing verification + applicable assurance obligations
+        -> completion gate / blocker / terminal handoff
+```
+
+### Changes by execution plane
+
+| Plane | What is added | Does it replace the old process? |
+|---|---|---|
+| Discovery | On-demand capability selection and dependency closure | No; selected runbooks only |
+| Goal / write | Application assurance obligations and a completion-readiness decision | No; writes still require the Goal and exact plan |
+| Security | Bounded test-result ledger and failure/retest lineage | No; authorization and security scope remain separate |
+| Continuity | Optional compaction-hook advisory with terminal revalidation | No; the existing handoff/state remains authoritative |
+| QA / resource | Finite audit, allowlisted fixtures, snapshot verify and no-overwrite restore | No; these are auxiliary release and recovery gates |
+
+### What happens when an obligation is blocked
+
+```text
+Selected capability -> required obligation -> fresh subject evidence?
+  no / missing / unknown -> BLOCKED or NOT-RUN -> record blocker -> handoff/suspend
+  yes -> independent verification -> valid applicable gate -> existing completion logic
+```
+
+A readiness gate is not deployment permission. An advisory model/selector result cannot create write authority. Hook delivery must be verified in the real host before calling it active.
+
+### Feature-by-feature workflow guides
+
+- [Universal Capability Routing](C2GRAPH-UNIVERSAL-CAPABILITY-GUIDE.md)
+- [Application Capability Profile and Assurance Completion](C2GRAPH-APPLICATION-ASSURANCE-GUIDE.md)
+- [Ledger, Reconciliation and Period-Close Assurance](C2GRAPH-LEDGER-PERIOD-CLOSE-GUIDE.md)
+- [Bounded Security Testing and Failure Lineage](C2GRAPH-SECURITY-VERIFICATION-GUIDE.md)
+- [Compaction Hooks and Resume Boundaries](C2GRAPH-HOOKS-RESUME-GUIDE.md)
+- [Bounded Resource and Temporary Workspace Controls](C2GRAPH-RESOURCE-BOUNDARIES-GUIDE.md)
+- [Allowlisted Snapshot, Verification and Restore](C2GRAPH-SNAPSHOT-BACKUP-RESTORE-GUIDE.md)
+- [Finite Automated Audit and Release Gate](C2GRAPH-AUDIT-OPERATIONS-GUIDE.md)
+- [Guarded Version Migration and Workflow Continuity](C2GRAPH-MIGRATION-UPGRADE-GUIDE.md)
+
+### How the additions are actually invoked
+
+`AGENTS.md` routes a relevant request to selected runbooks. The universal planner is an explicit read-only command, while `scripts/assurance/application.py` must be invoked with a project profile and obligation list to evaluate application readiness. `scripts/verify/all.py` runs framework verifiers/selftests, but does not by itself test a new adopter application or invoke its real application completion gate. Hook delivery likewise depends on host configuration and observed events.
+
+### Not changed
+
+- The three entry modes (`ADOPT_WITH_GOAL`, `WORKFLOW_ONLY`, `BOOTSTRAP`) and Core authority precedence are retained.
+- An existing terminal run stays terminal even when HANDOFF/CURSOR contains stale `open` state.
+- Approval, rollback basis, fresh pre-state and exact write scope remain independent gates.
+- Native host hook delivery, real adopter E2E and official public-asset patch replay are not established by these public guides.
+- Unselected industry modules are never automatically imported into a project.
+
+### Illustrative flow: payment callback after a closed period
+
+1. A project capability profile confirms `payments`, `webhooks` and `accounting`; policy ownership and jurisdiction are identified.
+2. The router selects corresponding runbooks and the application gate enumerates idempotency, signature, ledger and period-lock obligations.
+3. The provider callback is checked with a real authorized test: duplicate delivery must not create a second business effect.
+4. The period-close policy determines whether to reject, adjust or record a reversal; the agent cannot invent that decision.
+5. If policy/authorization/evidence is unresolved, the obligation remains blocked. Goal completion cannot be claimed from a passing UI snapshot.
+6. If a fix is authorized, existing exact-write, rollback, fresh pre-state and verification still apply.
+
 
 # How C2GRAPH is structured
 
@@ -1225,6 +1310,11 @@ It does not override those executable contracts.
 
 # Documentation
 
+## v1.4.19 new feature guides
+
+[New Feature Guides](C2GRAPH-V1.4.19-FEATURE-GUIDES.md). The existing public guides and catalogs below remain available as prior-release reference material. Do not include `PUBLIC-AUDIT*`, `PUBLIC-ASSURANCE-CANDIDATE.md`, raw logs or test evidence in the public guide bundle.
+
+
 C2GRAPH v1.3.2 ships a bilingual public-documentation layer that explains the current release without becoming a second operational authority plane.
 
 Operational authority remains in the shipped repository contracts: `AGENTS.md`, `.agent/config.yml`, routed scopes, runbooks, schemas, entry prompts, and executable validators.
@@ -1278,7 +1368,7 @@ This public layer is an explanatory/navigation surface. The executable source di
 
 ---
 
-# Verification snapshot
+# Historical verification snapshot (v1.3.2)
 
 C2GRAPH v1.3.2 reports bounded current-release evidence rather than relabeling historical v1.2.0 results as fresh proof.
 
@@ -1436,7 +1526,7 @@ See:
 
 # Author
 
-**Hafizh Albanna**
+**Hafizh Al-Banna**
 
 LinkedIn:
 

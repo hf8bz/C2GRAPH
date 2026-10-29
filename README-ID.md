@@ -8,24 +8,25 @@
 
 C2GRAPH membuat pekerjaan software berbasis agent lebih **bounded, measurable, traceable, resumable, reversible, dan auditable** dengan memindahkan execution state penting dari conversation history sementara ke kontrak repository yang eksplisit.
 
-[![Release](https://img.shields.io/badge/release-v1.3.2-blue)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
+[![Release candidate](https://img.shields.io/badge/candidate-v1.4.19-lightgrey)](https://github.com/hf8bz/C2GRAPH)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.22259065-blue)](https://doi.org/10.5281/zenodo.22259065)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.22259056-blue)](https://doi.org/10.5281/zenodo.22259056)
-[![Source checks](https://img.shields.io/badge/source_checks-43%2F43_EN_%7C_43%2F43_ID-brightgreen)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
+[![Historical source checks v1.3.2](https://img.shields.io/badge/historical_checks-v1.3.2-lightgrey)](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2)
 
-**Versi 1.3.2 · Rilis publik · 3 September 2026**
+**Versi 1.4.19 · Kandidat publikasi · 29 Oktober 2026**
 
-**Rilis publik sebelumnya:** v1.2.0 · 22 Agustus 2026  
-**Technical predecessor:** v1.3.1 · 1 September 2026
+**Rilis publik sebelumnya:** v1.3.2 · 2 September 2026  
+**Baseline source stabil:** v1.4.19 · 14 Oktober 2026
 
-[Release Notes](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2) ·
-[Release Paper](https://doi.org/10.5281/zenodo.22259065) ·
-[Software Archive](https://doi.org/10.5281/zenodo.22259056) ·
+[Previous public release](https://github.com/hf8bz/C2GRAPH/releases/tag/v.1.3.2) ·
+[Previous public paper](https://doi.org/10.5281/zenodo.22259065) ·
+[Previous software archive](https://doi.org/10.5281/zenodo.22259056) ·
 [Indeks Dokumentasi](C2GRAPH-PUBLIC-DOCS-INDEX-ID.md) ·
-[Ringkasan Rilis](C2GRAPH-V1.3.2-RELEASE-OVERVIEW-ID.md) ·
+[Ringkasan Rilis Sebelumnya](C2GRAPH-V1.3.2-RELEASE-OVERVIEW-ID.md) ·
 [Terminal Reconciliation](C2GRAPH-TERMINAL-RECONCILIATION-GUIDE-ID.md) ·
-[English](README.md)
+[English](README.md) ·
+[Panduan Fitur Baru](C2GRAPH-V1.4.19-FEATURE-GUIDES-ID.md)
 
 ---
 
@@ -164,7 +165,23 @@ Compatibility layer tidak boleh diam-diam menjadi repository authority.
 
 ---
 
-# Perubahan dari v1.2.0 ke v1.3.2
+# Perubahan dari v1.3.2 ke v1.4.19
+
+Bagian ini menjelaskan source lokal **v1.4.19** yang dibekukan. Penjelasan teknis dan identitas DOI v1.3.2 tetap menjadi catatan historis. Kandidat ini belum dipublikasikan di GitHub dan belum memiliki DOI baru.
+
+- **Assurance aplikasi:** skenario terikat subject, role, perubahan state, tes negatif dan kewajiban test-to-workflow.
+- **Kapabilitas domain universal:** discovery domain/kapabilitas bersifat pilihan; invariant akuntansi dan perilaku temporal tetap memerlukan bukti proyek.
+- **Keamanan resource:** fixture terbatas, anggaran read/output/proses, temporary path yang dimiliki dan prosedur snapshot/restore.
+- **QA keamanan:** pemeriksaan izin akses, isolasi role/tenant dan pengujian aktif yang memiliki scope jelas.
+- **Resume dan otomasi:** hook yang lebih eksplisit, terminal continuity, orkestrasi audit dan ekspor non-destruktif.
+
+Baca [Panduan Fitur Baru](C2GRAPH-V1.4.19-FEATURE-GUIDES-ID.md); gunakan file kanonis yang dirujuk untuk tindakan operasional. Paket panduan ini tidak berisi laporan audit atau evidence pengujian.
+
+**Catatan arsip:** Badge Paper DOI dan Software DOI di atas masih merujuk pada publikasi **v1.3.2**, bukan DOI v1.4.19.
+
+---
+
+# Riwayat: perubahan dari v1.2.0 ke v1.3.2
 
 v1.3.2 adalah rilis Version 1 yang backward-compatible terhadap rilis publik sebelumnya, v1.2.0.
 
@@ -304,6 +321,74 @@ Semua mechanism tersebut dapat memengaruhi strategy, diagnosis, containment, rep
 Tidak satu pun otomatis memperluas canonical exact-write authority.
 
 ---
+
+
+## Perubahan pada workflow sebelumnya
+
+Distribusi baru memperluas model tiga lapis lama. Fitur baru **tidak** mengganti Goal aktif, CORE rules, `ACTUAL_WRITE_SET`, rollback, atau terminal reconciliation.
+
+### Jalur sebelumnya dan jalur bersyarat sekarang
+
+```text
+Sebelum: Goal -> runbook berskop -> exact write plan -> efek terotorisasi -> verifikasi -> terminal/handoff
+Sekarang: Goal -> pemilih kapabilitas opsional -> runbook terpilih -> exact write plan lama
+         -> efek terotorisasi -> verifikasi lama + obligation assurance terkait
+         -> completion gate / blocker / terminal handoff
+```
+
+### Perubahan menurut plane eksekusi
+
+| Plane | Yang ditambahkan | Mengganti proses lama? |
+|---|---|---|
+| Discovery | Pemilihan kapabilitas dan closure dependensi on-demand | Tidak; hanya runbook terpilih |
+| Goal / write | Obligation assurance aplikasi dan keputusan kesiapan completion | Tidak; penulisan tetap membutuhkan Goal dan rencana tepat |
+| Keamanan | Ledger hasil test terbatas dan rantai failure/retest | Tidak; izin dan scope keamanan tetap terpisah |
+| Continuity | Advisory hook compaction opsional dengan validasi terminal | Tidak; handoff/state lama tetap otoritatif |
+| QA / resource | Audit terbatas, fixture allowlist, verifikasi snapshot dan restore tanpa overwrite | Tidak; ini gate QA/rilis dan recovery tambahan |
+
+### Jika obligation terblokir
+
+```text
+Kapabilitas terpilih -> obligation wajib -> bukti subjek terkini?
+  tidak / hilang / unknown -> BLOCKED atau NOT-RUN -> catat blocker -> handoff/suspend
+  ya -> verifikasi independen -> gate terkait valid -> logika completion lama
+```
+
+Gate ready bukan izin deploy. Hasil model/pemilih advisory tidak menciptakan write authority. Delivery hook harus dibuktikan di host nyata sebelum disebut aktif.
+
+### Panduan alur per fitur
+
+- [Perutean Kapabilitas Universal](C2GRAPH-UNIVERSAL-CAPABILITY-GUIDE-ID.md)
+- [Profil Kapabilitas dan Gate Penyelesaian Aplikasi](C2GRAPH-APPLICATION-ASSURANCE-GUIDE-ID.md)
+- [Assurance Ledger, Rekonsiliasi, dan Tutup Periode](C2GRAPH-LEDGER-PERIOD-CLOSE-GUIDE-ID.md)
+- [Pengujian Keamanan Terbatas dan Rantai Kegagalan](C2GRAPH-SECURITY-VERIFICATION-GUIDE-ID.md)
+- [Batas Hook Compaction dan Resume](C2GRAPH-HOOKS-RESUME-GUIDE-ID.md)
+- [Pembatasan Resource dan Workspace Sementara](C2GRAPH-RESOURCE-BOUNDARIES-GUIDE-ID.md)
+- [Snapshot, Verifikasi dan Restore Berbasis Allowlist](C2GRAPH-SNAPSHOT-BACKUP-RESTORE-GUIDE-ID.md)
+- [Audit Otomatis Terbatas dan Gate Rilis](C2GRAPH-AUDIT-OPERATIONS-GUIDE-ID.md)
+- [Migrasi Versi Terjaga dan Continuity Workflow](C2GRAPH-MIGRATION-UPGRADE-GUIDE-ID.md)
+
+### Bagaimana penambahan dipanggil secara nyata
+
+`AGENTS.md` merutekan permintaan relevan ke runbook terpilih. Planner universal adalah command read-only eksplisit, sedangkan `scripts/assurance/application.py` harus dipanggil dengan profil proyek dan obligation untuk menilai kesiapan aplikasi. `scripts/verify/all.py` menjalankan verifier/selftest framework, tetapi tidak dengan sendirinya menguji aplikasi adopter baru atau memanggil completion gate aplikasi nyata. Delivery hook juga bergantung konfigurasi host dan event teramati.
+
+### Yang tidak berubah
+
+- Tiga entry mode (`ADOPT_WITH_GOAL`, `WORKFLOW_ONLY`, `BOOTSTRAP`) dan prioritas Core tetap berlaku.
+- Run yang terminal tetap terminal meskipun HANDOFF/CURSOR lama menyebut `open`.
+- Approval, basis rollback, fresh pre-state dan exact write scope tetap gate yang berbeda.
+- Pengiriman hook native, E2E adopter nyata dan replay patch aset publik resmi tidak dibuktikan melalui panduan ini.
+- Modul industri yang tidak dipilih tidak otomatis masuk ke proyek.
+
+### Alur ilustratif: callback pembayaran setelah periode ditutup
+
+1. Profil proyek memastikan `payments`, `webhooks` dan `accounting` relevan; pemilik kebijakan dan yurisdiksi ditentukan.
+2. Router memilih runbook terkait, sedangkan gate aplikasi membuat obligation idempotensi, tanda tangan, ledger dan period-lock.
+3. Callback provider diuji secara sah: duplikasi pesan tidak boleh menciptakan efek bisnis kedua.
+4. Kebijakan tutup periode menentukan reject, adjustment atau reversal; agent tidak boleh mengarang keputusan tersebut.
+5. Jika kebijakan/izin/bukti belum lengkap, obligation tetap blocked. UI snapshot yang lolos saja tidak membuktikan Goal selesai.
+6. Jika perbaikan disetujui, exact-write, rollback, fresh pre-state dan verifikasi lama tetap berlaku.
+
 
 # Bagaimana C2GRAPH disusun
 
@@ -1277,6 +1362,11 @@ README tidak override executable contract tersebut.
 
 # Dokumentasi
 
+## Panduan fitur baru v1.4.19
+
+[Panduan Fitur Baru](C2GRAPH-V1.4.19-FEATURE-GUIDES-ID.md). Panduan dan katalog publik lama tetap tersedia sebagai referensi rilis sebelumnya. Jangan menyertakan `PUBLIC-AUDIT*`, `PUBLIC-ASSURANCE-CANDIDATE.md`, log atau bukti pengujian dalam ZIP panduan publik.
+
+
 C2GRAPH v1.3.2 membawa bilingual public-documentation layer.
 
 Public docs menjelaskan current release tetapi tidak menjadi authority plane kedua.
@@ -1286,7 +1376,7 @@ Public docs menjelaskan current release tetapi tidak menjadi authority plane ked
 | Kebutuhan | English | Bahasa Indonesia |
 | --- | --- | --- |
 | Navigasi seluruh public docs | [Public Docs Index](C2GRAPH-PUBLIC-DOCS-INDEX.md) | [Indeks Dokumentasi Publik](C2GRAPH-PUBLIC-DOCS-INDEX-ID.md) |
-| Memahami perubahan v1.3.2 | [Release Overview](C2GRAPH-V1.3.2-RELEASE-OVERVIEW.md) | [Ringkasan Rilis](C2GRAPH-V1.3.2-RELEASE-OVERVIEW-ID.md) |
+| Memahami perubahan v1.3.2 | [Previous Release Overview](C2GRAPH-V1.3.2-RELEASE-OVERVIEW.md) | [Ringkasan Rilis](C2GRAPH-V1.3.2-RELEASE-OVERVIEW-ID.md) |
 | Memahami Workflow Convergence | [Workflow Convergence](C2GRAPH-WORKFLOW-CONVERGENCE-GUIDE.md) | [Workflow Convergence ID](C2GRAPH-WORKFLOW-CONVERGENCE-GUIDE-ID.md) |
 | Memahami terminal boundary | [Terminal Reconciliation](C2GRAPH-TERMINAL-RECONCILIATION-GUIDE.md) | [Terminal Reconciliation ID](C2GRAPH-TERMINAL-RECONCILIATION-GUIDE-ID.md) |
 | Memeriksa exact distribution path | [File Map](C2GRAPH-FILE-MAP.md) | [File Map ID](C2GRAPH-FILE-MAP-ID.md) |
@@ -1330,7 +1420,7 @@ Executable source distribution jauh lebih besar dan memiliki internal graph-engi
 
 ---
 
-# Verification snapshot
+# Riwayat verification snapshot (v1.3.2)
 
 C2GRAPH v1.3.2 menggunakan bounded current-release evidence.
 
@@ -1562,7 +1652,7 @@ C2GRAPH dirilis menggunakan **MIT License**.
 
 # Author
 
-**Hafizh Albanna**
+**Hafizh Al-Banna**
 
 LinkedIn:
 
